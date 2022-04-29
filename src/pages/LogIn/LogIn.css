@@ -1,0 +1,9 @@
+.form-btn{
+    background-color: #2955f5;
+    transition: .5s;
+   }
+   .form-btn:hover{
+    background-color: #4971FE;
+    color: rgb(255, 255, 255);
+   
+   }
