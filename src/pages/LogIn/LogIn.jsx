@@ -3,7 +3,10 @@ import "./LogIn.css";
 
 const LogIn = () => {
   return (
-    <div className="lg:w-4/12 w-10/12 mx-auto py-14 border rounded-2xl px-6 my-20 shadow-lg">
+    <div className="lg:w-4/12 w-10/12 mx-auto py-7 border rounded-2xl px-6 my-20 shadow-lg">
+      <h3 className="mb-7 text-3xl font-medium text-center text-slate-700">
+        LogIn Form
+      </h3>
       <form>
         <div class="mb-6">
           <label
