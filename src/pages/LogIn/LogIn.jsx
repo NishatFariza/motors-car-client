@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LogIn.css";
 
 const LogIn = () => {
   return (
-    <div className="lg:w-4/12 w-10/12 mx-auto py-7 border rounded-2xl px-6 my-20 shadow-lg">
+    <div className="lg:w-4/12 w-10/12 mx-auto py-7 border rounded px-6 my-20 login-form">
       <h3 className="mb-7 text-3xl font-medium text-center text-slate-700">
         LogIn Form
       </h3>
@@ -61,6 +62,20 @@ const LogIn = () => {
           Log In
         </button>
       </form>
+      <div className="my-8 lg:pl-8 sm:p-0">
+        <p>
+          Forget Password?
+          <Link to="/signUp" className="text-sm lg:ml-3 link-text">
+            Click Reset!
+          </Link>
+        </p>
+        <p className="mt-1">
+          Create a new Account?
+          <Link to="/signUp" className="text-sm lg:ml-3 link-text">
+            SignUp!
+          </Link>
+        </p>
+      </div>
     </div>
   );
 };
