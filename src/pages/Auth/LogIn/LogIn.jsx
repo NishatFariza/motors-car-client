@@ -38,23 +38,7 @@ const LogIn = () => {
             required
           />
         </div>
-        <div class="flex items-start mb-6">
-          <div class="flex items-center h-5">
-            <input
-              id="remember"
-              type="checkbox"
-              value=""
-              class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-              required
-            />
-          </div>
-          <label
-            for="remember"
-            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >
-            Remember me
-          </label>
-        </div>
+        
         <button
           type="submit"
           class="text-white  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center form-btn"
@@ -62,19 +46,22 @@ const LogIn = () => {
           Log In
         </button>
       </form>
-      <div className="my-8 lg:pl-8 sm:p-0">
-        <p>
+      <div className="my-8">
+        <p className="text-stone-700">
           Forget Password?
           <Link to="/signUp" className="text-sm lg:ml-3 link-text">
             Click Reset!
           </Link>
         </p>
-        <p className="mt-1">
+        <p className="mt-1 text-stone-700">
           Create a new Account?
           <Link to="/signUp" className="text-sm lg:ml-3 link-text">
             SignUp!
           </Link>
         </p>
+      </div>
+      <div>
+        <div></div>
       </div>
     </div>
   );

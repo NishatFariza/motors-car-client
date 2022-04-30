@@ -3,11 +3,11 @@
 }
 
 .form-btn{
-    background-color: #2955f5;
+    background-color: #4971FE;
     transition: .5s;
 }
 .form-btn:hover{
-    background-color: #4971FE;
+    background-color: #2955f5;
     color: rgb(255, 255, 255);
    
 }
@@ -15,8 +15,9 @@
       color: #232628;
 }
 .link-text{
+    color: #232628cc;
     transition: .5s;
-    font-weight: 500;
+    font-weight: 600;
     
 }
 .link-text:hover{
