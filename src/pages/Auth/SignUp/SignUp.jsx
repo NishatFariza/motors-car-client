@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./SignUp.css";
 
 const SignUp = () => {
   return (
-    <div className="lg:w-6/12 w-10/12 mx-auto py-7 border rounded px-6 my-20">
+    <div className="lg:w-6/12 w-10/12 mx-auto border rounded py-4 px-6 my-20 signUp-form">
       <h3 className="mb-7 text-3xl font-medium text-center text-slate-700">
         SignUp
       </h3>
@@ -146,13 +147,18 @@ const SignUp = () => {
           type="submit"
           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
-          Submit
+          Sign In
         </button>
       </form>
-      <div>
-        <div className=""></div>
+      <div className="flex justify-center items-center my-6">
+        <div className="form-divider w-3/12"></div>
+        <p className="md:mx-4 mx-2">or</p>
+        <div className="form-divider w-3/12"></div>
       </div>
-      <div className="my-8 text-center">
+      <div className="w-full">
+        <button></button>
+      </div>
+      <div className="text-center">
         <p className="mt-1 text-stone-700">
           Already have an account?
           <Link to="/signUp" className="text-sm lg:ml-3 link-text">
