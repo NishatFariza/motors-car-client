@@ -38,7 +38,7 @@ const LogIn = () => {
             required
           />
         </div>
-        
+
         <button
           type="submit"
           class="text-white  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center form-btn"
@@ -46,22 +46,24 @@ const LogIn = () => {
           Log In
         </button>
       </form>
-      <div className="my-8">
-        <p className="text-stone-700">
+      <div className="my-6">
+        <p className="text-stone-700 text-sm">
           Forget Password?
           <Link to="/signUp" className="text-sm lg:ml-3 link-text">
             Click Reset!
           </Link>
         </p>
-        <p className="mt-1 text-stone-700">
+        <p className="mt-1 text-stone-700 text-sm ">
           Create a new Account?
           <Link to="/signUp" className="text-sm lg:ml-3 link-text">
             SignUp!
           </Link>
         </p>
       </div>
-      <div>
-        <div></div>
+      <div className="flex justify-center items-center">
+        <div className="form-divider w-3/12"></div>
+        <p className="md:mx-4 mx-2">or</p>
+        <div className="form-divider w-3/12"></div>
       </div>
     </div>
   );
