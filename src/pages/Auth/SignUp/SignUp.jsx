@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
-    <div>
+    <div className="lg:w-6/12 w-10/12 mx-auto py-7 border rounded px-6 my-20">
       <h3>SignUp Here</h3>
 
       <form>
@@ -146,6 +147,17 @@ const SignUp = () => {
           Submit
         </button>
       </form>
+      <div>
+        <div className=""></div>
+      </div>
+      <div className="my-8 text-center">
+        <p className="mt-1 text-stone-700">
+          Already have an account?
+          <Link to="/signUp" className="text-sm lg:ml-3 link-text">
+            Sign in!
+          </Link>
+        </p>
+      </div>
     </div>
   );
 };
