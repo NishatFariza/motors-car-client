@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SignUp.css";
-import { FcGoogle } from "react-icons/fc";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import { toast } from "react-toastify";
+import SocialLogIn from "../SocialLogIn/SocialLogIn";
 
 const SignUp = () => {
   const [email, setEmail] = useState();
@@ -16,7 +17,15 @@ const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, UserError] =
     useCreateUserWithEmailAndPassword(auth);
 
-  //get user data
+  //handle error
+  if (error) {
+    toast(error.massage);
+    console.log(error);
+  }
+
+  
+
+  //get user data email and password
   const handleEmailBlur = (event) => {
     setEmail(event.target.value);
   };
@@ -151,7 +160,7 @@ const SignUp = () => {
           type="submit"
           className="text-white  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center form-btn form-btn"
         >
-          Sign In
+          Sign Up
         </button>
       </form>
       <div className="my-6">
@@ -167,12 +176,7 @@ const SignUp = () => {
         <p className="md:mx-4 mx-2">or</p>
         <div className="form-divider w-3/12"></div>
       </div>
-      <div>
-        <button className="bg-slate-200 md:w-8/12 mx-auto md:py-3 py-2 px-5 md:px-6 flex justify-center items-center rounded-full google-btn md:text-lg text-sm ">
-          <FcGoogle className="mr-4 md:text-3xl text-lg"></FcGoogle>
-          Sign Up With Google
-        </button>
-      </div>
+      <SocialLogIn/>
     </div>
   );
 };
