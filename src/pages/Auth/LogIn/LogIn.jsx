@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./LogIn.css";
-import { FcGoogle } from "react-icons/fc";
 import SocialLogIn from "../SocialLogIn/SocialLogIn";
 
 const LogIn = () => {
