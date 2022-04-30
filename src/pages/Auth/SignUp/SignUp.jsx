@@ -23,9 +23,7 @@ const SignUp = () => {
     console.log(error);
   }
 
-  
-
-  //get user data email and password
+  //create user data email and password
   const handleEmailBlur = (event) => {
     setEmail(event.target.value);
   };
@@ -176,7 +174,7 @@ const SignUp = () => {
         <p className="md:mx-4 mx-2">or</p>
         <div className="form-divider w-3/12"></div>
       </div>
-      <SocialLogIn/>
+      <SocialLogIn />
     </div>
   );
 };
