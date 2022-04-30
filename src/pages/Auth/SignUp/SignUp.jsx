@@ -16,8 +16,21 @@ const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, UserError] =
     useCreateUserWithEmailAndPassword(auth);
 
+  //get user data
   const handleEmailBlur = (event) => {
     setEmail(event.target.value);
+  };
+  const handlePasswordBlur = (event) => {
+    setPassword(event.target.value);
+  };
+  const handleConfirmPasswordBlur = (event) => {
+    setConfirmPassword(event.target.value);
+  };
+  const handleFirstNameBlur = (event) => {
+    setFirstName(event.target.value);
+  };
+  const handleLastNameBlur = (event) => {
+    setLastName(event.target.value);
   };
 
   const handleFormSubmit = (event) => {
@@ -49,6 +62,7 @@ const SignUp = () => {
         </div>
         <div className="relative z-0 w-full mb-6 group">
           <input
+            onBlur={handlePasswordBlur}
             type="password"
             name="floating_password"
             id="floating_password"
@@ -65,6 +79,7 @@ const SignUp = () => {
         </div>
         <div className="relative z-0 w-full mb-6 group">
           <input
+            onBlur={handleConfirmPasswordBlur}
             type="password"
             name="repeat_password"
             id="floating_repeat_password"
@@ -82,6 +97,7 @@ const SignUp = () => {
         <div className="grid xl:grid-cols-2 xl:gap-6">
           <div className="relative z-0 w-full mb-6 group">
             <input
+              onBlur={handleFirstNameBlur}
               type="text"
               name="floating_first_name"
               id="floating_first_name"
@@ -98,6 +114,7 @@ const SignUp = () => {
           </div>
           <div className="relative z-0 w-full mb-6 group">
             <input
+              onBlur={handleLastNameBlur}
               type="text"
               name="floating_last_name"
               id="floating_last_name"
