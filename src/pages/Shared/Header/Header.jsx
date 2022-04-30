@@ -10,37 +10,52 @@ const Header = () => {
         <img src={logo} alt="" />
       </div>
       <div>
-        <Link className="hover:text-blue-600 duration-500 font-semibold" to="/">
+        <Link className="hover:text-blue-600 duration-500 menu-text" to="/">
           HOME
         </Link>
-        <Link className="hover:text-blue-600 duration-500 ml-4 font-semibold" to="/">
+        <Link
+          className="hover:text-blue-600 duration-500 ml-4 menu-text"
+          to="/"
+        >
           INVENTORY
         </Link>
-        <Link className="hover:text-blue-600 duration-500 ml-4 font-semibold" to="/">
+        <Link
+          className="hover:text-blue-600 duration-500 ml-4 menu-text"
+          to="/"
+        >
           BLOGS
         </Link>
       </div>
       <div>
         <Link
-          className="hover:text-blue-600 duration-500 ml-4 font-semibold"
+          className="hover:text-blue-600 duration-500 ml-4 menu-text"
           to="/manageItem"
         >
-          Mange Items
+          MANAGE ITEMS
         </Link>
-        <Link className="hover:text-blue-600 duration-500 ml-4 font-semibold" to="/addItem">
-          Add Item
+        <Link
+          className="hover:text-blue-600 duration-500 ml-4 menu-text"
+          to="/addItem"
+        >
+          ADD ITEMS
         </Link>
-        <Link className="hover:text-blue-600 duration-500 ml-4 font-semibold" to="/myItem">
-          My Item
+        <Link
+          className="hover:text-blue-600 duration-500 ml-4 menu-text"
+          to="/myItem"
+        >
+          MY ITEMS
         </Link>
-        <Link className="hover:text-blue-600 duration-500 ml-4 font-semibold" to="/blogs">
-          Blogs
+        <Link
+          className="hover:text-blue-600 duration-500 ml-4 menu-text"
+          to="/login"
+        >
+          LOGIN
         </Link>
-        <Link className="hover:text-blue-600 duration-500 ml-4 font-semibold" to="/login">
-          LogIn
-        </Link>
-        <Link className="hover:text-blue-600 duration-500 ml-4 font-semibold" to="/signUp">
-          Sign Up
+        <Link
+          className="hover:text-blue-600 duration-500 ml-4 menu-text"
+          to="/signUp"
+        >
+          SIGN IN
         </Link>
       </div>
     </nav>

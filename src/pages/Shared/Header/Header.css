@@ -1,3 +1,8 @@
 .nav{
     background-color: #102127;
 }
+.menu-text{
+    font-size: 15px;
+    line-height: 52px;
+    font-weight: 500;
+}
