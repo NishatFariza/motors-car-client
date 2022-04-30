@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LogIn.css";
 import SocialLogIn from "../SocialLogIn/SocialLogIn";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 
 const LogIn = () => {
@@ -25,6 +25,12 @@ const LogIn = () => {
 
     signInWithEmailAndPassword(email, password);
   };
+
+  //reset password use google
+  const [sendPasswordResetEmail, sending, passError] =
+    useSendPasswordResetEmail(auth);
+
+   
 
   return (
     <div className="lg:w-4/12 w-10/12 mx-auto py-7 border rounded px-6 my-20 login-form">
