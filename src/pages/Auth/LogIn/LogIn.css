@@ -3,11 +3,12 @@
 }
 
 .form-btn{
-    background-color: #4971FE;
+    background-color: #2955f5;
+    color: #ffffff;
     transition: .5s;
 }
 .form-btn:hover{
-    background-color: #2955f5;
+    background-color: #5174f3;
     color: rgb(255, 255, 255);
    
 }

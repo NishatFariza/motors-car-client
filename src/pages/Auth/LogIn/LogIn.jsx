@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./LogIn.css";
+import { FcGoogle } from "react-icons/fc";
 
 const LogIn = () => {
   return (
@@ -64,6 +65,12 @@ const LogIn = () => {
         <div className="form-divider w-3/12"></div>
         <p className="md:mx-4 mx-2">or</p>
         <div className="form-divider w-3/12"></div>
+      </div>
+      <div className="my-4">
+        <button className="bg-slate-200 w-8/12 mx-auto py-2 px-6 flex justify-center items-center rounded-full google-btn">
+          <FcGoogle className="mr-4 text-2xl"></FcGoogle>
+          Sign Up With Google
+        </button>
       </div>
     </div>
   );
