@@ -10,52 +10,31 @@ const Header = () => {
         <img src={logo} alt="" />
       </div>
       <div>
-        <Link className="hover:text-blue-600 duration-500 menu-text" to="/">
+        <Link className=" duration-500 menu-text" to="/">
           HOME
         </Link>
-        <Link
-          className="hover:text-blue-600 duration-500 ml-4 menu-text"
-          to="/"
-        >
+        <Link className=" duration-500 ml-4 menu-text" to="/">
           INVENTORY
         </Link>
-        <Link
-          className="hover:text-blue-600 duration-500 ml-4 menu-text"
-          to="/"
-        >
+        <Link className=" duration-500 ml-4 menu-text" to="/">
           BLOGS
         </Link>
       </div>
       <div>
-        <Link
-          className="hover:text-blue-600 duration-500 ml-4 menu-text"
-          to="/manageItem"
-        >
+        <Link className=" duration-500 ml-4 menu-text" to="/manageItem">
           MANAGE ITEMS
         </Link>
-        <Link
-          className="hover:text-blue-600 duration-500 ml-4 menu-text"
-          to="/addItem"
-        >
+        <Link className=" duration-500 ml-4 menu-text" to="/addItem">
           ADD ITEMS
         </Link>
-        <Link
-          className="hover:text-blue-600 duration-500 ml-4 menu-text"
-          to="/myItem"
-        >
+        <Link className=" duration-500 ml-4 menu-text" to="/myItem">
           MY ITEMS
         </Link>
-        <Link
-          className="hover:text-blue-600 duration-500 ml-4 menu-text"
-          to="/login"
-        >
+        <Link className=" duration-500 ml-4 menu-text" to="/login">
           LOGIN
         </Link>
-        <Link
-          className="hover:text-blue-600 duration-500 ml-4 menu-text"
-          to="/signUp"
-        >
-          SIGN IN
+        <Link className=" duration-500 ml-4 menu-text" to="/LogOut">
+          LOG OUT
         </Link>
       </div>
     </nav>

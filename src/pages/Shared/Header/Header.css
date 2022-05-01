@@ -6,3 +6,6 @@
     line-height: 52px;
     font-weight: 500;
 }
+.menu-text:hover{
+    color: #0d46ff;
+}

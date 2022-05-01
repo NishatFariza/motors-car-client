@@ -5,6 +5,7 @@ import './App.css';
 import LogIn from './pages/Auth/LogIn/LogIn';
 import SignUp from './pages/Auth/SignUp/SignUp';
 import Home from './pages/HomePage/Home/Home';
+import Footer from './pages/Shared/Footer/Footer';
 import Header from './pages/Shared/Header/Header';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/logIn' element={<LogIn></LogIn>}></Route>
         <Route path='/signUp' element={<SignUp></SignUp>}></Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer/>
     </div>
   );
