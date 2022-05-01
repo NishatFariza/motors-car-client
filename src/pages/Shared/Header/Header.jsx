@@ -5,7 +5,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <nav className="flex justify-around items-center nav py-5 text-white ">
+    <nav className="flex justify-around items-center shared-bg py-5 text-white ">
       <div>
         <img src={logo} alt="" />
       </div>
