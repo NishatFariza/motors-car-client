@@ -1,9 +1,9 @@
 import React from "react";
 import "./Banner.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import slider1 from "../../../images/slide1.jpg";
-import slider2 from "../../../images/slide2.jpg";
-import slider3 from "../../../images/slide3.jpg";
+// import slider1 from "../../../images/slide1.jpg";
+// import slider2 from "../../../images/slide2.jpg";
+// import slider3 from "../../../images/slide3.jpg";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -29,13 +29,13 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img className="slider-img" src={slider1} alt="" />
+          <div className="h-[90vh] bg-[url('https://i.ibb.co/QJ2pMZx/slide1.jpg')] bg-cover"></div>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="slider-img" src={slider2} alt="" />
+          <div className="h-[90vh] bg-[url('https://i.ibb.co/grV33LR/slide2.jpg')] bg-cover"></div>
         </SwiperSlide>
         <SwiperSlide>
-          <img className="slider-img" src={slider3} alt="" />
+          <div className="h-[90vh] bg-[url('https://i.ibb.co/cLFwhKz/slide3.jpg')] bg-cover"></div>
         </SwiperSlide>
       </Swiper>
     </>
