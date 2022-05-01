@@ -1,7 +1,9 @@
 import React from "react";
-import './Banner.css'
+import "./Banner.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import slider1 from "../../../images/jaguar_slide.jpg";
+import slider1 from "../../../images/slide1.jpg";
+import slider2 from "../../../images/slide2.jpg";
+import slider3 from "../../../images/slide3.jpg";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -30,22 +32,10 @@ const Banner = () => {
           <img src={slider1} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slider1} alt="" />
+          <img src={slider2} alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slider1} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider1} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider1} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider1} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider1} alt="" />
+          <img src={slider3} alt="" />
         </SwiperSlide>
       </Swiper>
     </>
