@@ -1,0 +1,12 @@
+.footer-text{
+    color:#aaa;
+}
+.footer-divider{
+    border-bottom:1px solid rgba(117, 117, 117, 0.411) ;
+}
+.footer-icon{
+    color:rgb(112, 112, 112);
+}
+.footer-icon:hover{
+    color:rgb(219, 218, 218);
+}

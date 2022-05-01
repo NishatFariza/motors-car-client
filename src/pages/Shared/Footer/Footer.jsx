@@ -1,54 +1,95 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import footerLogo from "../../../images/logo.png";
+import "./Footer.css";
+import { BsFacebook } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+import { FaGooglePlus } from "react-icons/fa";
 
 const Footer = () => {
+  const today = new Date();
+  const year = today.getFullYear();
   return (
     <footer className="shared-bg py-12">
-      <div className="mx-auto container flex justify-around items-center">
+      <div className="w-10/12 mx-auto container flex justify-around items-center footer-divider pb-6">
         <div className="w-4/12">
-          <img className="w-3/12" src={footerLogo} alt="" />
+          <img className="w-4/12" src={footerLogo} alt="" />
         </div>
         <div>
-          <a href="">Contact Us</a>
-          <a href="">Contact Us</a>
-          <a href="">Contact Us</a>
-          <a href="">Contact Us</a>
+          <a
+            className="footer-text duration-500 text-sm mr-3 hover:text-white"
+            href=""
+          >
+            Contact Us
+          </a>
+          <a
+            className="footer-text duration-500 text-sm mr-3 hover:text-white"
+            href=""
+          >
+            About Us
+          </a>
+          <a
+            className="footer-text duration-500 text-sm mr-3 hover:text-white"
+            href=""
+          >
+            Inventory
+          </a>
+          <a
+            className="footer-text duration-500 text-sm mr-3 hover:text-white"
+            href=""
+          >
+            Prices
+          </a>
+          <a
+            className="footer-text duration-500 text-sm mr-3 hover:text-white"
+            href=""
+          >
+            Dealers
+          </a>
         </div>
         <div>
-          <form>
-            <label
-              for="default-search"
-              class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
-            >
-              Search
-            </label>
-            <div class="relative">
-              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                <svg
-                  class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  ></path>
-                </svg>
-              </div>
-              <input
-                type="search"
-                id="default-search"
-                class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Search Cars"
-                required=""
-              />
+          <label
+            for="default-search"
+            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
+          >
+            Search
+          </label>
+          <div class="relative">
+            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+              <svg
+                class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
             </div>
-          </form>
+            <input
+              type="search"
+              id="default-search"
+              class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Search Cars"
+              required=""
+            />
+          </div>
+        </div>
+      </div>
+      <div className="w-10/12 mx-auto container flex justify-between items-center pb-4 mt-4">
+        <div className="w-4/12">
+          <small className="footer-text">Copyright &copy; {year}. Motors</small>
+        </div>
+        <div className="flex">
+          <BsFacebook className="mr-4 text-xl footer-icon duration-500 cursor-pointer" />
+          <BsTwitter className="mr-4 text-xl footer-icon duration-500 cursor-pointer" />
+          <BsInstagram className="mr-4 text-xl footer-icon duration-500 cursor-pointer" />
+          <FaGooglePlus className="mr-4 text-xl footer-icon duration-500 cursor-pointer" />
         </div>
       </div>
     </footer>
