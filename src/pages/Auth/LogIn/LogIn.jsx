@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LogIn.css";
 import SocialLogIn from "../SocialLogIn/SocialLogIn";
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 
 const LogIn = () => {
@@ -30,18 +33,16 @@ const LogIn = () => {
   const [sendPasswordResetEmail, sending, passError] =
     useSendPasswordResetEmail(auth);
 
-   
-
   return (
     <div className="lg:w-4/12 w-10/12 mx-auto py-7 border rounded px-6 my-20 login-form">
       <h3 className="mb-7 text-3xl font-medium text-center text-slate-700">
         LogIn Form
       </h3>
       <form onSubmit={handleLogInUser}>
-        <div class="mb-6">
+        <div className="mb-6">
           <label
-            for="email"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            htmlFor="email"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
           >
             Your email
           </label>
@@ -49,15 +50,15 @@ const LogIn = () => {
             onBlur={handleEmailBlur}
             type="email"
             id="email"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Your Email"
             required
           />
         </div>
-        <div class="mb-6">
+        <div className="mb-6">
           <label
-            for="password"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            htmlFor="password"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
           >
             Your password
           </label>
@@ -65,14 +66,14 @@ const LogIn = () => {
             onBlur={handlePasswordBlur}
             type="password"
             id="password"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
           />
         </div>
 
         <button
           type="submit"
-          class="text-white  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center form-btn"
+          className="text-white  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center form-btn"
         >
           Log In
         </button>
