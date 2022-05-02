@@ -1,9 +1,10 @@
 import React from "react";
 
+
 const Car = ({ car }) => {
   const { name, img, price, description, supplier, quantity } = car;
   return (
-    <div className="border rounded-2xl">
+    <div className="border rounded-2xl box-shadow duration-500 cursor-pointer">
       <div className="rounded-2xl">
         <img className="rounded-2xl" src={img} alt="" />
       </div>

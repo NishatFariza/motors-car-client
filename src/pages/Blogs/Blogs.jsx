@@ -15,12 +15,12 @@ const Blogs = () => {
         FREQUENTLY ASK <span className="text-yellow-400">QUESTION</span>
       </h2>
       <div className="h-1 w-24 rounded-lg bg-blue-400 mx-auto mb-12"></div>
-      <Accordion>
+      <Accordion className="border rounded box-shadow duration-500">
         <AccordionItem>
-          <AccordionItemHeading className="border p-3 rounded">
+          <AccordionItemHeading className="border-b  p-3 rounded">
             <AccordionItemButton className="text-2xl font-bold text-blue-400 flex items-center">
               <AiFillQuestionCircle className="mr-2"></AiFillQuestionCircle>
-              What harsh truths do you prefer to ignore?
+              WHAT IS THE DIFFERENCE BETWEEN JAVASCRIPT AND NODEJS?
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
