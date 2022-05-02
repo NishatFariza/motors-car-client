@@ -17,7 +17,7 @@ const InventoryItems = () => {
   return (
     <div className="container mx-auto py-24">
       <div className="mb-16 text-center">
-        <h2 className=" text-4xl font-bold mb-3">
+        <h2 className=" text-4xl font-bold mb-3 primary-color">
           RECENT <span className="text-yellow-400">CARS</span>
         </h2>
         <div className="h-1 w-24 rounded-lg bg-blue-400 mx-auto"></div>
