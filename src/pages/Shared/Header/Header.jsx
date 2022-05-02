@@ -21,8 +21,8 @@ const Header = () => {
         </Link>
       </div>
       <div>
-        <Link className=" duration-500 ml-4 menu-text" to="/manageItem">
-          MANAGE ITEMS
+        <Link className=" duration-500 ml-4 menu-text" to="/manageInventory">
+          MANAGE INVENTORY
         </Link>
         <Link className=" duration-500 ml-4 menu-text" to="/addItem">
           ADD ITEMS
