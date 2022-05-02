@@ -1,4 +1,5 @@
 import React from "react";
+import { AiFillQuestionCircle } from "react-icons/ai";
 import {
   Accordion,
   AccordionItem,
@@ -9,12 +10,16 @@ import {
 
 const Blogs = () => {
   return (
-    <div>
-      <h2>Blogs</h2>
+    <div className="mx-auto w-8/12 container py-20">
+      <h2 className="text-center mb-3 text-4xl font-bold primary-color">
+        FREQUENTLY ASK <span className="text-yellow-400">QUESTION</span>
+      </h2>
+      <div className="h-1 w-24 rounded-lg bg-blue-400 mx-auto mb-12"></div>
       <Accordion>
         <AccordionItem>
-          <AccordionItemHeading>
-            <AccordionItemButton>
+          <AccordionItemHeading className="border p-3 rounded">
+            <AccordionItemButton className="text-2xl font-bold text-blue-400 flex items-center">
+              <AiFillQuestionCircle className="mr-2"></AiFillQuestionCircle>
               What harsh truths do you prefer to ignore?
             </AccordionItemButton>
           </AccordionItemHeading>

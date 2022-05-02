@@ -6,9 +6,9 @@ import "./Header.css";
 const Header = () => {
   return (
     <nav className="flex justify-around items-center shared-bg py-5 text-white ">
-      <div>
+      <Link to="/" className="cursor-pointer">
         <img src={logo} alt="" />
-      </div>
+      </Link>
       <div>
         <Link className=" duration-500 menu-text" to="/">
           HOME
