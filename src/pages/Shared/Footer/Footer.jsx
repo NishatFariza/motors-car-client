@@ -5,6 +5,7 @@ import { BsFacebook } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { FaGooglePlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const today = new Date();
@@ -16,36 +17,27 @@ const Footer = () => {
           <img className="w-4/12" src={footerLogo} alt="" />
         </div>
         <div>
-          <a
-            className="footer-text duration-500 text-sm mr-3 hover:text-white"
-            href=""
-          >
-            Contact Us
-          </a>
-          <a
-            className="footer-text duration-500 text-sm mr-3 hover:text-white"
-            href=""
-          >
-            About Us
-          </a>
-          <a
+          <Link
+            to="/"
             className="footer-text duration-500 text-sm mr-3 hover:text-white"
             href=""
           >
             Inventory
-          </a>
-          <a
+          </Link>
+          <Link
+            to="/"
             className="footer-text duration-500 text-sm mr-3 hover:text-white"
             href=""
           >
             Prices
-          </a>
-          <a
-            className="footer-text duration-500 text-sm mr-3 hover:text-white"
+          </Link>
+          <Link
+            to="/"
+            className="footer-text duration-500 text-sm  hover:text-white"
             href=""
           >
             Dealers
-          </a>
+          </Link>
         </div>
         <div>
           <label

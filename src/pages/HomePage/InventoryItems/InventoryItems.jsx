@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Car from "../Car/car";
+import Car from "../Car/Car";
 
 const InventoryItems = () => {
-  const [cars, setCars] = useState();
+  const [cars, setCars] = useState([]);
 
   useEffect(() => {
     const url = `http://localhost:5000/cars`;
@@ -15,11 +15,16 @@ const InventoryItems = () => {
   }, []);
 
   return (
-    <div className="container mx-auto py-12">
-      <h2 className="text-center text-2xl font-semibold">Recent Cars</h2>
-      <div>
-        {cars.map((car) => (
-          <Car car={car}></Car>
+    <div className="container mx-auto py-24">
+      <div className="mb-16 text-center">
+        <h2 className=" text-4xl font-bold mb-3">
+          RECENT <span className="text-yellow-400">CARS</span>
+        </h2>
+        <div className="h-1 w-24 rounded-lg bg-blue-400 mx-auto"></div>
+      </div>
+      <div className="grid grid-cols-3 gap-7">
+        {cars.slice(0, 6).map((car) => (
+          <Car car={car} key={car.id}></Car>
         ))}
       </div>
     </div>
