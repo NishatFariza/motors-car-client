@@ -6,7 +6,7 @@ const InventoryItems = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    const url = `http://localhost:5000/cars`;
+    const url = `https://murmuring-temple-22703.herokuapp.com/cars`;
     (async () => {
       const { data } = await axios.get(url);
       setCars(data);
