@@ -3,9 +3,9 @@ import { AiFillCar } from "react-icons/ai";
 
 const BuySellCar = () => {
   return (
-    <div className="h-[90vh] bg-[url('https://i.ibb.co/Ld4wfH3/buy-Car-bg.jpg')] bg-cover bg-blend-overlay bg-fixed">
-      <div className="container mx-10 flex justify-center items-center  ">
-        <div className="bg-white my-28 py-10 px-8 mr-8 rounded">
+    <div className=" bg-[url('https://i.ibb.co/Ld4wfH3/buy-Car-bg.jpg')] bg-cover bg-blend-overlay bg-fixed">
+      <div className="h-[100vh] mx-10 flex justify-center items-center">
+        <div className="bg-white py-10 px-8 mr-8 rounded">
           <AiFillCar className=" text-6xl text-stone-700 mt-6"></AiFillCar>
           <h4 className="primary-color font-bold my-8 text-3xl">
             LOOKING FOR A CAR?
@@ -18,7 +18,7 @@ const BuySellCar = () => {
             INVENTORY
           </button>
         </div>
-        <div className="bg-yellow-400 my-28 py-10 px-8 rounded">
+        <div className="bg-yellow-400 py-10 px-8 rounded">
           <AiFillCar className=" text-6xl text-stone-700 mt-6"></AiFillCar>
           <h4 className="primary-color font-bold my-8 text-3xl">
             WANT TO SELL A CAR?
