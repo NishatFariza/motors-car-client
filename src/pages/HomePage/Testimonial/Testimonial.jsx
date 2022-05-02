@@ -2,6 +2,9 @@ import React from "react";
 import { FaQuoteRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import testimonial1 from "../../../images/testimonial1.jpg";
+import testimonial2 from "../../../images/testimonial2.jpeg";
+import testimonial3 from "../../../images/testimonial3.jpg";
+
 import "./Testimonial.css";
 
 import "swiper/css";
@@ -25,16 +28,16 @@ const Testimonial = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="flex justify-center items-center h-[80vh] w-[40%] mx-auto">
+          <div className="flex justify-center items-center h-[90vh] w-[50%] mx-auto">
             <div className="text-center py-8">
               <img
                 className="mx-auto border-8 testimonial-img"
-                src={testimonial1}
+                src={testimonial3}
                 alt=""
               />
               <h4 className="mt-6 text-xl text-white">Khalid</h4>
               <p className="mb-6 text-stone-400">Customer</p>
-              <blockquote className="text-white text-xl">
+              <blockquote className="text-white text-xl mb-6">
                 “Impressed! We really only knock the R8 Performance for the
                 sport seats that have no seatback adjustments. The side
                 bolstering is also a bit too aggressive, which could be
@@ -46,14 +49,18 @@ const Testimonial = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex justify-center items-center h-[80vh] w-[40%] mx-auto">
+          <div className="flex justify-center items-center h-[90vh] w-[50%] mx-auto">
             <div className="text-center">
               <div>
-                <img className="mx-auto" src={testimonial1} alt="" />
+                <img
+                  className="mx-auto testimonial-img border-8"
+                  src={testimonial2}
+                  alt=""
+                />
               </div>
-              <h4>Donald Simpson</h4>
-              <p>Customer</p>
-              <blockquote className="text-white text-xl">
+              <h4 className="mt-6 text-xl text-white">Donald Simpson</h4>
+              <p className="mb-6 text-stone-400">Customer</p>
+              <blockquote className="text-white text-xl mb-6">
                 “With its recent 2021 refresh, we don't expect too many changes
                 for 2023, and Tesla hasn't confirmed anything. Tesla will likely
                 add new features via over-the-air updates, and to stay
@@ -65,12 +72,16 @@ const Testimonial = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex justify-center items-center h-[80vh] w-[40%] mx-auto">
+          <div className="flex justify-center items-center h-[90vh] w-[50%] mx-auto">
             <div className="text-center">
-              <img className="mx-auto" src={testimonial1} alt="" />
-              <h4>JOANA OLSEN</h4>
-              <p>Customer</p>
-              <blockquote className="text-white text-xl">
+              <img
+                className="mx-auto testimonial-img border-8"
+                src={testimonial1}
+                alt=""
+              />
+              <h4 className="mt-6 text-xl text-white">JOANA OLSEN</h4>
+              <p className="mb-6 text-stone-400">Customer</p>
+              <blockquote className="text-white text-xl mb-6">
                 “The Highlander has been hauling large families around for over
                 20 years. It serves as Toyota's midsize three-row SUV that's
                 positioned above the smaller two-row RAV4 and below the larger
