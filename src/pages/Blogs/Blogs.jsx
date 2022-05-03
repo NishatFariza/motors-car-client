@@ -135,7 +135,7 @@ const Blogs = () => {
           <AccordionItemHeading className=" py-6 px-3 rounded">
             <AccordionItemButton className="text-2xl font-bold text-blue-400 flex items-center">
               <AiFillQuestionCircle className="mr-2"></AiFillQuestionCircle>
-              What is The Purpose of JWT?
+              What is The Purpose of JWT? How dose Work JWT?
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
