@@ -99,26 +99,35 @@ const Blogs = () => {
           <AccordionItemPanel className="border-y ">
             <p className="px-6 pt-3 border-t">
               <strong className="underline primary-color font-bold text-justify">
-                JavaScript:
+                SQL:
               </strong>
-              Javascript is a programming language that is used for writing
-              scripts on the website. It is basically used on the client-side.
-              It is capable enough to add HTML and play with the DOM. Javascript
-              can run in any browser engine as like JS core in safari and
-              Spidermonkey in Firefox. It is the upgraded version of ECMA scrip
-              that uses Chrome’s V8 engine written in C++. Some of the
-              javascript frameworks are RamdaJS, TypedJS, etc.
+              SQL databases are primarily called as Relational Databases
+              (RDBMS). SQL databases defines and manipulates data based
+              structured query language (SQL). In almost all situations SQL
+              databases are vertically scalable. This means that you can
+              increase the load on a single server by increasing things like
+              RAM, CPU or SSD. SQL databases are table-based. SQL databases
+              follow ACID properties (Atomicity, Consistency, Isolation and
+              Durability). Great support is available for all SQL database from
+              their vendors. Also a lot of independent consultations are there
+              who can help you with SQL database for a very large scale
+              deployments.
             </p>
             <p className="px-6 py-8">
               <strong className="underline primary-color font-bold">
-                NodeJS:
+                NoSQL:
               </strong>
-              NodeJS is a Javascript runtime environment. It is mostly used on
-              the server-side. Nodejs does not have capability to add HTML tags.
-              V8 is the Javascript engine inside of node.js that parses and runs
-              Javascript. Nodejs is written in C, C++ and Javascript. Some of
-              the Nodejs modules are Lodash, express etc. These modules are to
-              be imported from npm.
+              NoSQL database are primarily called as non-relational or
+              distributed database. A NoSQL database has dynamic schema for
+              unstructured data. Data is stored in many ways which means it can
+              be document-oriented, column-oriented, graph-based or organized as
+              a KeyValue store. NoSQL databases are horizontally scalable. NoSQL
+              databases are either key-value pairs, document-based, graph
+              databases or wide-column stores. The NoSQL database follows the
+              Brewers CAP theorem (Consistency, Availability and Partition
+              tolerance). NoSQL database you still have to rely on community
+              support and only limited outside experts are available for setting
+              up and deploying your large scale NoSQL deployments.
             </p>
           </AccordionItemPanel>
         </AccordionItem>
