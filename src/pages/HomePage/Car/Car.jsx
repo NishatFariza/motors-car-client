@@ -32,7 +32,7 @@ const Car = ({ car }) => {
             : description}
         </p>
         <button
-          onClick={() => navigate(`/inventory/:${id}`)}
+          onClick={() => navigate(`/inventory/${car._id}`)}
           className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600"
         >
           Stock Update
