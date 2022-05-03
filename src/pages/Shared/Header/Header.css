@@ -1,11 +1,17 @@
 .shared-bg{
     background-color: #102127;
 }
-.menu-text{
+nav a{
     font-size: 15px;
     line-height: 52px;
     font-weight: 500;
+    margin-right: 15px;
+    transition: .5s;
+    padding-bottom: 8px;
 }
-.menu-text:hover{
+
+.activeLink{
     color: #0d46ff;
+    border-bottom: 2px solid #fff;
+    transition: .5s;
 }

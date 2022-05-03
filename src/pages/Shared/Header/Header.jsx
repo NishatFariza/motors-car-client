@@ -11,28 +11,28 @@ const Header = () => {
           <img src={logo} alt="" />
         </NavLink>
         <div>
-          <NavLink className=" duration-500 menu-text" to="/">
+          <NavLink className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')}  to="/">
             HOME
           </NavLink>
-          <NavLink className=" duration-500 ml-4 menu-text" to="/blogs">
+          <NavLink className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')} to="/blogs">
             BLOGS
           </NavLink>
           <NavLink
-            className=" duration-500 ml-4 menu-text"
+            className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')}
             to="/manageInventory"
           >
             MANAGE INVENTORY
           </NavLink>
-          <NavLink className=" duration-500 ml-4 menu-text" to="/addItem">
+          <NavLink className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')} to="/addItem">
             ADD ITEM
           </NavLink>
-          <NavLink className=" duration-500 ml-4 menu-text" to="/myItem">
+          <NavLink className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')} to="/myItem">
             MY ITEM
           </NavLink>
-          <NavLink className=" duration-500 ml-4 menu-text" to="/login">
+          <NavLink className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')} to="/login">
             LOGIN
           </NavLink>
-          <NavLink className=" duration-500 ml-4 menu-text" to="/LogOut">
+          <NavLink className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')} to="/LogOut">
             LOG OUT
           </NavLink>
         </div>
