@@ -10,7 +10,7 @@ import {
 
 const Blogs = () => {
   return (
-    <div className="mx-auto w-8/12 container py-20">
+    <div className="mx-auto w-9/12 container py-20">
       <h2 className="text-center mb-3 text-4xl font-bold primary-color">
         FREQUENTLY ASK <span className="text-yellow-400">QUESTION</span>
       </h2>
@@ -20,11 +20,11 @@ const Blogs = () => {
           <AccordionItemHeading className="border-t  py-6 px-3 rounded">
             <AccordionItemButton className="text-2xl font-bold text-blue-400 flex items-center">
               <AiFillQuestionCircle className="mr-2"></AiFillQuestionCircle>
-              WHAT IS THE DIFFERENCE BETWEEN JAVASCRIPT AND NODE.JS?
+              What is The Different Between JavaScript And NodeJS?
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel className="border-b">
-            <p className="px-4 pt-8">
+            <p className="px-6 pt-3 border-t">
               <strong className="underline primary-color font-bold text-justify">
                 JavaScript:
               </strong>
@@ -36,7 +36,7 @@ const Blogs = () => {
               that uses Chrome’s V8 engine written in C++. Some of the
               javascript frameworks are RamdaJS, TypedJS, etc.
             </p>
-            <p className="px-4 py-8">
+            <p className="px-6 py-8">
               <strong className="underline primary-color font-bold">
                 NodeJS:
               </strong>
@@ -53,11 +53,11 @@ const Blogs = () => {
           <AccordionItemHeading className="border-y-b  py-6 px-3 rounded">
             <AccordionItemButton className="text-2xl font-bold text-blue-400 flex items-center">
               <AiFillQuestionCircle className="mr-2"></AiFillQuestionCircle>
-              WHY SHOULD WE USE NODE.JS? AND WHY SHOULD WE USE MONGODB?
+              When Should We Use NodeJS? And When Should We Use MongoDB?
             </AccordionItemButton>
           </AccordionItemHeading>
-          <AccordionItemPanel className="border-b">
-            <p className="px-4 pt-8">
+          <AccordionItemPanel>
+            <p className="px-6 pt-3 border-t">
               <strong className="underline primary-color font-bold text-justify">
                 Purpose Of NodeJS:
               </strong>
@@ -72,10 +72,20 @@ const Blogs = () => {
               process as it fills the gap between frontend and backend
               applications.
             </p>
-            <p className="px-4 py-8">
+            <p className="px-6 py-8">
               <strong className="underline primary-color font-bold">
                 Purpose Of MongoDB:
               </strong>
+              MongoDB is an open source NoSQL database management program. so we
+              need to understand when and When we need to use this type of
+              database in the real-life applications. Since in normal
+              circumstances, MongoDB always preferred by the developers or
+              project managers when our main concern is the deal with large
+              volume of data with a high performance. If we want to insert
+              thousands of records in a second, then MongoDB is the best choice
+              for that. Also, horizontal scaling (adding new columns) is not so
+              easy process in any RDBMS systems. But in case of MongoDB, it is
+              very much easy since it is a schema less database.
             </p>
           </AccordionItemPanel>
         </AccordionItem>
@@ -83,11 +93,11 @@ const Blogs = () => {
           <AccordionItemHeading className="  py-6 px-3 rounded">
             <AccordionItemButton className="text-2xl font-bold text-blue-400 flex items-center">
               <AiFillQuestionCircle className="mr-2"></AiFillQuestionCircle>
-              WHAT IS THE DIFFERENCE BETWEEN JAVASCRIPT AND NODE.JS?
+              What is The Different Between SQL And NoSQL?
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel className="border-y ">
-            <p className="px-4 pt-8">
+            <p className="px-6 pt-3 border-t">
               <strong className="underline primary-color font-bold text-justify">
                 JavaScript:
               </strong>
@@ -99,7 +109,7 @@ const Blogs = () => {
               that uses Chrome’s V8 engine written in C++. Some of the
               javascript frameworks are RamdaJS, TypedJS, etc.
             </p>
-            <p className="px-4 py-8">
+            <p className="px-6 py-8">
               <strong className="underline primary-color font-bold">
                 NodeJS:
               </strong>
@@ -120,7 +130,7 @@ const Blogs = () => {
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
-            <p className="px-4 pt-8">
+            <p className="px-6 pt-3 border-t">
               <strong className="underline primary-color font-bold text-justify">
                 JavaScript:
               </strong>
@@ -132,7 +142,7 @@ const Blogs = () => {
               that uses Chrome’s V8 engine written in C++. Some of the
               javascript frameworks are RamdaJS, TypedJS, etc.
             </p>
-            <p className="px-4 py-8">
+            <p className="px-6 py-8">
               <strong className="underline primary-color font-bold">
                 NodeJS:
               </strong>

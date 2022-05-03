@@ -29,13 +29,42 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="h-[90vh] bg-[url('https://i.ibb.co/QJ2pMZx/slide1.jpg')] bg-cover"></div>
+          <div className=" bg-[url('https://i.ibb.co/QJ2pMZx/slide1.jpg')] bg-cover">
+            <div className="w-70 h-[90vh] flex justify-center items-center">
+              <div className="flex items-start">
+                <div className="h-4 w-14 bg-blue-700 rounded mt-5 mr-2"></div>
+                <h1 className="text-6xl font-bold text-white">
+                  Advanced features. <br /> Environment friendly.
+                </h1>
+              </div>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[90vh] bg-[url('https://i.ibb.co/grV33LR/slide2.jpg')] bg-cover"></div>
+          <div className="h-[90vh] bg-[url('https://i.ibb.co/grV33LR/slide2.jpg')] bg-cover">
+            <div className="w-70 h-[90vh] flex justify-center items-center">
+              <div className="flex items-start">
+                <div className="h-4 w-14 bg-blue-700 rounded mt-5 mr-2"></div>
+                <h1 className="text-6xl font-bold text-white">
+                  Visualize, Customize,
+                  <br /> Actualize.
+                </h1>
+              </div>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[90vh] bg-[url('https://i.ibb.co/cLFwhKz/slide3.jpg')] bg-cover"></div>
+          <div className="h-[90vh] bg-[url('https://i.ibb.co/cLFwhKz/slide3.jpg')] bg-cover">
+            <div className="w-70 h-[90vh] flex justify-center items-center">
+              <div className="flex items-start">
+                <div className="h-4 w-14 bg-blue-700 rounded mt-5 mr-2"></div>
+                <h1 className="text-6xl font-bold text-white">
+                  The ultimate all-electric
+                  <br /> performance SUV
+                </h1>
+              </div>
+            </div>
+          </div>
         </SwiperSlide>
       </Swiper>
     </>
