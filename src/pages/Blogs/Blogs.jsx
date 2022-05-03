@@ -135,32 +135,36 @@ const Blogs = () => {
           <AccordionItemHeading className=" py-6 px-3 rounded">
             <AccordionItemButton className="text-2xl font-bold text-blue-400 flex items-center">
               <AiFillQuestionCircle className="mr-2"></AiFillQuestionCircle>
-              WHAT IS THE DIFFERENCE BETWEEN JAVASCRIPT AND NODE.JS?
+              What is The Purpose of JWT?
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
             <p className="px-6 pt-3 border-t">
               <strong className="underline primary-color font-bold text-justify">
-                JavaScript:
+                JWT:
               </strong>
-              Javascript is a programming language that is used for writing
-              scripts on the website. It is basically used on the client-side.
-              It is capable enough to add HTML and play with the DOM. Javascript
-              can run in any browser engine as like JS core in safari and
-              Spidermonkey in Firefox. It is the upgraded version of ECMA scrip
-              that uses Chrome’s V8 engine written in C++. Some of the
-              javascript frameworks are RamdaJS, TypedJS, etc.
+              JSON Web Token (JWT) is an open standard (RFC 7519) that defines a
+              compact and self-contained way for securely transmitting
+              information between parties as a JSON object. This information can
+              be verified and trusted because it is digitally signed. JWTs can
+              be signed using a secret (with the HMAC algorithm) or a
+              public/private key pair using RSA or ECDSA. When tokens are signed
+              using public/private key pairs, the signature also certifies that
+              only the party holding the private key is the one that signed it.
             </p>
             <p className="px-6 py-8">
               <strong className="underline primary-color font-bold">
-                NodeJS:
+                Jwt Work:
               </strong>
-              NodeJS is a Javascript runtime environment. It is mostly used on
-              the server-side. Nodejs does not have capability to add HTML tags.
-              V8 is the Javascript engine inside of node.js that parses and runs
-              Javascript. Nodejs is written in C, C++ and Javascript. Some of
-              the Nodejs modules are Lodash, express etc. These modules are to
-              be imported from npm.
+              JWTs differ from other web tokens in that they contain a set of
+              claims. Claims are used to transmit information between two
+              parties. A JWT is a string made up of three parts, separated by
+              dots (.), and serialized using base64. In the most common
+              serialization format, compact serialization, the JWT looks
+              something like this: xxxxx.yyyyy.zzzzz. Once decoded, you will get
+              two JSON strings: The header, The payload And The signature. The
+              JOSE (JSON Object Signing and Encryption) header contains the type
+              of token JWT in this case and the signing algorithm.
             </p>
           </AccordionItemPanel>
         </AccordionItem>
