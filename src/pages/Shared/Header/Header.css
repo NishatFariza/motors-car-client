@@ -6,12 +6,11 @@ nav a{
     line-height: 52px;
     font-weight: 500;
     margin-right: 15px;
-    transition: .5s;
     padding-bottom: 8px;
 }
 
 .activeLink{
     color: #0d46ff;
     border-bottom: 2px solid #fff;
-    transition: .5s;
+   
 }
