@@ -26,7 +26,7 @@ const Inventory = () => {
     const newStock = parseInt(event.target.stock.value);
     // console.log(stock);
     const totalStock = parseInt(quantity) + newStock;
-    console.log(totalStock);
+    // console.log(totalStock);
     const updateCar = {
       img: img,
       name: name,
@@ -37,9 +37,50 @@ const Inventory = () => {
       quantity: totalStock,
       description: description,
     };
+    // console.log(updateCar);
     setCar(updateCar);
 
-    
+    const url = `http://localhost:5000/inventory/${id}`;
+    // console.log(url);
+    axios
+      .put(url, updateCar)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
+  const handleOndDelivery = (event) => {
+    const totalStock = parseInt(quantity) - 1;
+    // console.log(totalStock);
+    const updateCar = {
+      img: img,
+      name: name,
+      price: price,
+      supplier: supplier,
+      sold: `${totalStock < 1 ? "Sold Out" : sold}`,
+      description,
+      quantity: totalStock,
+      description: description,
+    };
+    console.log(updateCar);
+    setCar(updateCar);
+
+    const url = `http://localhost:5000/inventory/${id}`;
+    // console.log(url);
+    axios
+      .put(url, updateCar)
+      .then(function (response) {
+        console.log(response);
+        if(response.data.modifiedCount == 1){
+          
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   return (
@@ -53,6 +94,13 @@ const Inventory = () => {
           <p>{supplier}</p>
           <p>{description}</p>
           <p>{quantity}</p>
+          <p>Id:{id}</p>
+          <button
+            onClick={handleOndDelivery}
+            className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600"
+          >
+            Delivered
+          </button>
         </div>
         <div>
           <form onSubmit={handleAddStock}>
