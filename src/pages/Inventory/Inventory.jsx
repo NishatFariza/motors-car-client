@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { RiArrowRightLine } from "react-icons/ri";
 
 const Inventory = () => {
   const { id } = useParams();
@@ -108,9 +109,10 @@ const Inventory = () => {
           </form>
         </div>
       </div>
-      <div className="text-right">
-        <button className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600">
+      <div className="flex justify-end mt-8">
+        <button className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold">
           Manage Inventory
+          <RiArrowRightLine className="text-xl ml-2"></RiArrowRightLine>
         </button>
       </div>
     </div>
