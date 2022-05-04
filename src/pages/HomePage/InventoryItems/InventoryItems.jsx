@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Car from "../Car/Car";
 import { RiArrowRightLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const InventoryItems = () => {
   const [cars, setCars] = useState([]);
@@ -29,10 +30,13 @@ const InventoryItems = () => {
         ))}
       </div>
       <div className="mt-8 flex justify-end">
-        <button className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold text-stone-600">
+        <Link
+          to="/manageInventory"
+          className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold "
+        >
           Manage Inventory
           <RiArrowRightLine className="text-xl ml-2"></RiArrowRightLine>
-        </button>
+        </Link>
       </div>
     </div>
   );

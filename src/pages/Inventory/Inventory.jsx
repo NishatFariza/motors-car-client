@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { RiArrowRightLine } from "react-icons/ri";
 import toast from "react-hot-toast";
 
@@ -49,7 +49,7 @@ const Inventory = () => {
       .then(function (response) {
         console.log(response);
         if (response.data.modifiedCount === 1) {
-          toast.success(`${newStock} Added successful`)
+          toast.success(`${newStock} Added successful`);
         }
       })
       .catch(function (error) {
@@ -80,7 +80,7 @@ const Inventory = () => {
       .then(function (response) {
         console.log(response);
         if (response.data.modifiedCount === 1) {
-          toast.success('Item Delivered')
+          toast.success("Item Delivered");
         }
       })
       .catch(function (error) {
@@ -115,10 +115,13 @@ const Inventory = () => {
         </div>
       </div>
       <div className="flex justify-end mt-8">
-        <button className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold">
+        <Link
+          to="/manageInventory"
+          className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"
+        >
           Manage Inventory
           <RiArrowRightLine className="text-xl ml-2"></RiArrowRightLine>
-        </button>
+        </Link>
       </div>
     </div>
   );
