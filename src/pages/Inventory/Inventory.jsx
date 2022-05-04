@@ -91,37 +91,43 @@ const Inventory = () => {
   return (
     <div className="container mx-auto py-24">
       <div className="flex justify-between items-center">
-        <div>
-          <img src={img} alt="" />
+        <div className="border w-6/12 py-8 px-4">
+          <div className="">
+            <img className="w-full" src={img} alt="" />
+          </div>
           <h2>{name}</h2>
           <p>{price}</p>
           <p>{sold}</p>
           <p>{supplier}</p>
-          <p>{description}</p>
           <p>{quantity}</p>
           <p>Id:{id}</p>
-          <button
-            onClick={handleOndDelivery}
-            className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600"
-          >
-            Delivered
-          </button>
+          <div className="text-justify ">
+            <p>{description}</p>
+          </div>
+          <div className="flex justify-end">
+            <button
+              onClick={handleOndDelivery}
+              className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600"
+            >
+              Delivered
+            </button>
+          </div>
         </div>
-        <div>
+        <div className="border">
           <form onSubmit={handleAddStock}>
             <input type="number" name="stock" id="" />
             <input type="submit" value="Add Stock" />
           </form>
+          <div className="mt-8">
+            <Link
+              to="/manageInventory"
+              className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"
+            >
+              Manage Inventory
+              <RiArrowRightLine className="text-xl ml-2"></RiArrowRightLine>
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="flex justify-end mt-8">
-        <Link
-          to="/manageInventory"
-          className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"
-        >
-          Manage Inventory
-          <RiArrowRightLine className="text-xl ml-2"></RiArrowRightLine>
-        </Link>
       </div>
     </div>
   );

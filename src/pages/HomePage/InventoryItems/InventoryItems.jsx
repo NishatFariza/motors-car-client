@@ -3,18 +3,10 @@ import React, { useEffect, useState } from "react";
 import Car from "../Car/Car";
 import { RiArrowRightLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import useCars from "../../../Hooks/UseCars";
 
 const InventoryItems = () => {
-  const [cars, setCars] = useState([]);
-
-  useEffect(() => {
-    const url = `http://localhost:5000/cars`;
-    (async () => {
-      const { data } = await axios.get(url);
-      setCars(data);
-      console.log(data);
-    })();
-  }, []);
+  const [cars, setCars] = useCars();
 
   return (
     <div className="container mx-auto py-24">

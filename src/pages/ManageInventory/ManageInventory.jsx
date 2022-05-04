@@ -1,7 +1,11 @@
 import React from "react";
 import { AiFillDelete } from "react-icons/ai";
+import useCars from "../../Hooks/UseCars";
 
-const ManageInventory = () => {
+const ManageInventorys = () => {
+  const [cars, setCars] = useCars();
+
+  const handleDeleteItem = () => {};
   return (
     <div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -38,8 +42,9 @@ const ManageInventory = () => {
               <td className="px-6 py-4">$2999</td>
               <td className="px-6 py-4 text-right">
                 <button
+                  onClick={handleDeleteItem}
                   href="#"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  className="font-medium text-3xl text-blue-600 dark:text-blue-500 hover:underline"
                 >
                   <AiFillDelete></AiFillDelete>
                 </button>
@@ -90,4 +95,4 @@ const ManageInventory = () => {
   );
 };
 
-export default ManageInventory;
+export default ManageInventorys;
