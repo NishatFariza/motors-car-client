@@ -7,9 +7,9 @@ import SignUp from './pages/Auth/SignUp/SignUp';
 import Blogs from './pages/Blogs/Blogs';
 import Home from './pages/HomePage/Home/Home';
 import Inventory from './pages/Inventory/Inventory';
-import ManageInventorys from './pages/ManageInventory/ManageInventory';
 import Footer from './pages/Shared/Footer/Footer';
 import Header from './pages/Shared/Header/Header';
+import ManageInventorys from './pages/ManageInventorys/ManageInventorys.jsx'
 import NotFound from './pages/Shared/NotFound/NotFound';
 
 function App() {
