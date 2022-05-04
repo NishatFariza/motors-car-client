@@ -74,8 +74,7 @@ const Inventory = () => {
       .put(url, updateCar)
       .then(function (response) {
         console.log(response);
-        if(response.data.modifiedCount == 1){
-          
+        if (response.data.modifiedCount == 1) {
         }
       })
       .catch(function (error) {
@@ -108,6 +107,11 @@ const Inventory = () => {
             <input type="submit" value="Add Stock" />
           </form>
         </div>
+      </div>
+      <div className="text-right">
+        <button className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600">
+          Manage Inventory
+        </button>
       </div>
     </div>
   );

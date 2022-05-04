@@ -27,6 +27,11 @@ const InventoryItems = () => {
           <Car car={car} key={car._id}></Car>
         ))}
       </div>
+      <div className="text-right mt-6">
+        <button className="border bg-blue-500 px-6 py-2 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold text-stone-600">
+          Manage Inventory
+        </button>
+      </div>
     </div>
   );
 };

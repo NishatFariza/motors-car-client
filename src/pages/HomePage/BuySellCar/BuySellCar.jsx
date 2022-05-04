@@ -14,7 +14,7 @@ const BuySellCar = () => {
             Our cars are delivered fully-registered with all requirements <br />
             completed. We’ll deliver your car wherever you are.
           </p>
-          <button className=" bg-blue-500 px-6 py-2 rounded hover:bg-yellow-400 hover:text-white duration-500 font-semibold text-white my-6">
+          <button className=" bg-blue-500 px-6 py-2 rounded hover:bg-yellow-400  duration-500 font-semibold text-white my-6">
             INVENTORY
           </button>
         </div>
