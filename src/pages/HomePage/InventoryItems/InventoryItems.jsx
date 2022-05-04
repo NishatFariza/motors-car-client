@@ -6,7 +6,7 @@ const InventoryItems = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    const url = `https://murmuring-temple-22703.herokuapp.com/cars`;
+    const url = `http://localhost:5000/cars`;
     (async () => {
       const { data } = await axios.get(url);
       setCars(data);
@@ -24,7 +24,7 @@ const InventoryItems = () => {
       </div>
       <div className="grid grid-cols-3 gap-7">
         {cars.slice(0, 6).map((car) => (
-          <Car car={car} key={car.id}></Car>
+          <Car car={car} key={car._id}></Car>
         ))}
       </div>
     </div>
