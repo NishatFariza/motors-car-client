@@ -23,6 +23,7 @@ function App() {
         <Route path='/signUp' element={<SignUp></SignUp>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/manageInventory' element={<ManageInventorys></ManageInventorys>}></Route>
+        
         <Route path='/inventory/:id' element={<Inventory></Inventory>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
