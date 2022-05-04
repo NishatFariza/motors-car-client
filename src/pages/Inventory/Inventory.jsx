@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { RiArrowRightLine } from "react-icons/ri";
+import toast from "react-hot-toast";
 
 const Inventory = () => {
   const { id } = useParams();
@@ -47,6 +48,9 @@ const Inventory = () => {
       .put(url, updateCar)
       .then(function (response) {
         console.log(response);
+        if (response.data.modifiedCount === 1) {
+          toast.success(`${newStock} Added successful`)
+        }
       })
       .catch(function (error) {
         console.log(error);
@@ -75,7 +79,8 @@ const Inventory = () => {
       .put(url, updateCar)
       .then(function (response) {
         console.log(response);
-        if (response.data.modifiedCount == 1) {
+        if (response.data.modifiedCount === 1) {
+          toast.success('Item Delivered')
         }
       })
       .catch(function (error) {

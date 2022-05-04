@@ -1,6 +1,6 @@
 
+import { Toaster } from 'react-hot-toast';
 import { Route, Routes } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
 import './App.css';
 import LogIn from './pages/Auth/LogIn/LogIn';
 import SignUp from './pages/Auth/SignUp/SignUp';
@@ -16,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
+      <Toaster></Toaster>
       <Routes>
         <Route path='/' element={<Home></Home>}>Home</Route>
         <Route path='/logIn' element={<LogIn></LogIn>}></Route>
@@ -26,7 +27,6 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
-      <ToastContainer/>
     </div>
   );
 }
