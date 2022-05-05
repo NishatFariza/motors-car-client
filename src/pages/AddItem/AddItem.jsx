@@ -3,9 +3,10 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
 import auth from "../../firebase.init";
+import Loading from "../Loading/Loading";
 
 const AddItem = () => {
-  const [user] = useAuthState(auth);
+  const [user, loading, error] = useAuthState(auth);
 
   const handleAddItem = (event) => {
     event.preventDefault();
@@ -35,6 +36,10 @@ const AddItem = () => {
         console.log(error);
       });
   };
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
   return (
     <div className="py-10 px-6 w-8/12 mx-auto border my-24">
       <form onSubmit={handleAddItem}>
@@ -59,7 +64,7 @@ const AddItem = () => {
             <input
               type="email"
               name="email"
-              value={user?.email}
+              value={user.email}
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               readOnly

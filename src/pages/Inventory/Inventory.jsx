@@ -27,9 +27,13 @@ const Inventory = () => {
   const handleAddStock = (event) => {
     event.preventDefault();
     const newStock = parseInt(event.target.stock.value);
-    // console.log(stock);
-    const totalStock = parseInt(quantity) + newStock;
-    // console.log(totalStock);
+    // console.log(newStock);
+    if (isNaN(newStock)) {
+      toast.error("Please!! Enter Some Item");
+      return;
+    }
+    const totalStock = parseInt(quantity || 0) + newStock;
+    console.log(quantity);
     const updateCar = {
       img: img,
       name: name,
@@ -38,7 +42,7 @@ const Inventory = () => {
       sold: sold,
       description,
       quantity: totalStock,
-      description: description,
+      description: description
     };
     // console.log(updateCar);
     setCar(updateCar);
@@ -48,7 +52,7 @@ const Inventory = () => {
     axios
       .put(url, updateCar)
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         if (response.data.modifiedCount === 1) {
           toast.success(`${newStock} Added successful`);
         }
@@ -121,7 +125,7 @@ const Inventory = () => {
                 {quantity}
               </p>
               <p className="text-stone-500 font-semibold mt-0">
-                <strong className="primary-color">Sold: </strong>Sold: {sold}
+                <strong className="primary-color">Sold: </strong> {sold}
               </p>
               <p className="text-yellow-500 font-semibold mt-0">{price}</p>
               <p className="text-stone-700 font-semibold mt-0">Id: {id}</p>
