@@ -31,7 +31,7 @@ const MangeInventory = () => {
   };
   return (
     <div className="py-10 mx-10"> 
-    
+
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -56,7 +56,7 @@ const MangeInventory = () => {
           <tbody>
             {cars.map((car) => {
               const { name, price, img, supplier, _id } = car;
-              console.log(img);
+              // console.log(img);
               return (
                 <tr
                   key={car._id}
