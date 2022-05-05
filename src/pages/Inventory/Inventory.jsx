@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { RiArrowRightLine } from "react-icons/ri";
 import toast from "react-hot-toast";
+import "./Inventory.css";
 
 const Inventory = () => {
   const { id } = useParams();
@@ -91,36 +92,56 @@ const Inventory = () => {
   return (
     <div className="container mx-auto py-24">
       <div className="flex justify-between items-center">
-        <div className="border w-9/12 flex justify-around items-center">
-          <div className="w-5/12 ">
-            <img className="w-full" src={img} alt="" />
-          </div>
-          <div className="w-5/12 py-5">
-            <h2>{name}</h2>
-            <p>{price}</p>
-            <p>{sold}</p>
-            <p>{supplier}</p>
-            <p>{quantity}</p>
-            <p>Id:{id}</p>
-            <div className="text-justify ">
-              <p>{description}</p>
+        <div className="border card-shadow w-9/12 rounded">
+          <div className=" flex justify-between">
+            <div className="w-6/12 h-full rounded">
+              <img className="w-full h-full rounded" src={img} alt="" />
+            </div>
+
+            <div className="w-6/12 px-10 pt-6">
+              <div className="flex justify-between items-center">
+                <h2 className="text-3xl text-blue-400 hover:text-yellow-400 duration-500 font-bold">
+                  {name}
+                </h2>
+                <div className="items-end flex justify-end">
+                  <button
+                    onClick={handleOndDelivery}
+                    className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600"
+                  >
+                    Delivered
+                  </button>
+                </div>
+              </div>
+              <p className="text-stone-500 font-semibold mt-2">
+                <strong className="primary-color">Supplier: </strong>
+                {supplier}
+              </p>
+              <p className="text-stone-500 font-semibold mt-0">
+                <strong className="primary-color">Stock: </strong>
+                {quantity}
+              </p>
+              <p className="text-stone-500 font-semibold mt-0">
+                <strong className="primary-color">Sold: </strong>Sold: {sold}
+              </p>
+              <p className="text-yellow-500 font-semibold mt-0">{price}</p>
+              <p className="text-stone-700 font-semibold mt-0">Id: {id}</p>
+              <div className="text-justify text-stone-500 mt-2">
+                <p>{description}</p>
+              </div>
             </div>
           </div>
-          <div className="flex justify-center items-start">
-            <button
-              onClick={handleOndDelivery}
-              className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600"
-            >
-              Delivered
-            </button>
-          </div>
         </div>
-        <div className="border">
+        <div className="w-3/12 text-center">
           <form onSubmit={handleAddStock}>
-            <input type="number" name="stock" id="" />
-            <input type="submit" value="Add Stock" />
+            <input className="rounded" type="number" name="stock" id="" />
+            <br />
+            <input
+              className="bg-blue-500 px-6 cursor-pointer py-2 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"
+              type="submit"
+              value="Add Stock"
+            />
           </form>
-          <div className="mt-8">
+          <div className="mt-4">
             <Link
               to="/manageInventory"
               className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"
