@@ -8,10 +8,9 @@ import useCars from "../../Hooks/UseCars";
 
 const MangeInventory = () => {
   const [cars, setCars] = useCars();
-  
 
   const handleDeleteItem = (id) => {
-    console.log(id);
+    // console.log(id);
     const url = `http://localhost:5000/inventory/${id}`;
     // console.log(url);
     Swal.fire({
@@ -41,7 +40,7 @@ const MangeInventory = () => {
     });
   };
   return (
-    <div className="pb-10 mx-10 pt-5">
+    <div className="pb-20 mx-10 pt-5">
       <div className="mb-8 flex justify-end">
         <Link
           to="/addItem"

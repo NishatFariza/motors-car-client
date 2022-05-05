@@ -33,7 +33,7 @@ const Inventory = () => {
       return;
     }
     const totalStock = parseInt(quantity || 0) + newStock;
-    console.log(quantity);
+    // console.log(quantity);
     const updateCar = {
       img: img,
       name: name,
@@ -42,7 +42,7 @@ const Inventory = () => {
       sold: sold,
       description,
       quantity: totalStock,
-      description: description
+      description: description,
     };
     // console.log(updateCar);
     setCar(updateCar);
@@ -75,7 +75,7 @@ const Inventory = () => {
       quantity: totalStock,
       description: description,
     };
-    console.log(updateCar);
+    // console.log(updateCar);
     setCar(updateCar);
 
     const url = `http://localhost:5000/inventory/${id}`;
@@ -83,7 +83,7 @@ const Inventory = () => {
     axios
       .put(url, updateCar)
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         if (response.data.modifiedCount === 1) {
           toast.success("Item Delivered");
         }

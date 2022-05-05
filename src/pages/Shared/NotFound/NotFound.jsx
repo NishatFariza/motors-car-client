@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className="md:py-20 mx-auto container">
+    <div className="md:py-32 mx-auto container">
       <div className="text-center">
         <h2 className="text-4xl font-bold primary-color">
           THE PAGE YOU ARE LOOKING FOR <br /> DOES NOT EXIST

@@ -12,34 +12,35 @@ const Footer = () => {
   const year = today.getFullYear();
   return (
     <footer className="shared-bg py-12">
-      <div className="w-10/12 mx-auto container flex justify-around items-center footer-divider pb-6">
+      <div className="w-10/12 mx-auto container flex justify-between items-center footer-divider pb-6">
         <div className="w-4/12">
-          <img className="w-4/12" src={footerLogo} alt="" />
+          <img className="" src={footerLogo} alt="" />
         </div>
-        <div>
-          <Link
-            to="/"
-            className="footer-text duration-500 text-sm mr-3 hover:text-white"
-            href=""
-          >
-            Inventory
-          </Link>
-          <Link
-            to="/"
-            className="footer-text duration-500 text-sm mr-3 hover:text-white"
-            href=""
-          >
-            Prices
-          </Link>
-          <Link
-            to="/"
-            className="footer-text duration-500 text-sm  hover:text-white"
-            href=""
-          >
-            Dealers
-          </Link>
-        </div>
-        <div>
+
+        <div className="flex justify-center items-center">
+          <div className="mr-10">
+            <Link
+              to="/"
+              className="footer-text duration-500 text-sm mr-3 hover:text-white"
+              href=""
+            >
+              Inventory
+            </Link>
+            <Link
+              to="/"
+              className="footer-text duration-500 text-sm mr-3 hover:text-white"
+              href=""
+            >
+              Prices
+            </Link>
+            <Link
+              to="/"
+              className="footer-text duration-500 text-sm  hover:text-white"
+              href=""
+            >
+              Dealers
+            </Link>
+          </div>
           <label
             htmlFor="default-search"
             className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
