@@ -44,7 +44,7 @@ const MangeInventory = () => {
     <div className="pb-10 mx-10 pt-5">
       <div className="mb-8 flex justify-end">
         <Link
-          to="/manageInventory"
+          to="/addItem"
           className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold "
         >
           Add Item
