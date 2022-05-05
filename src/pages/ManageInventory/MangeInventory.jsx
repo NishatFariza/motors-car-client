@@ -30,10 +30,11 @@ const MangeInventory = () => {
     }
   };
   return (
-    <div>
+    <div className="py-10 mx-10"> 
+    
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <thead className="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" className="px-6 py-3">
                 Product Image
@@ -47,14 +48,15 @@ const MangeInventory = () => {
               <th scope="col" className="px-6 py-3">
                 Price
               </th>
-              <th scope="col" className="px-6 py-3">
-                <span className="sr-only">Edit</span>
+              <th scope="col" className="px-6 py-3 text-right">
+                Delete
               </th>
             </tr>
           </thead>
           <tbody>
             {cars.map((car) => {
               const { name, price, img, supplier, _id } = car;
+              console.log(img);
               return (
                 <tr
                   key={car._id}
@@ -64,16 +66,21 @@ const MangeInventory = () => {
                     scope="row"
                     className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
                   >
-                    <img src={img} alt="" />
+                    <div
+                      className="
+                   w-20 rounded"
+                    >
+                      <img className="rounded" src={img} alt="" />
+                    </div>
                   </th>
-                  <td className="px-6 py-4">{name}</td>
-                  <td className="px-6 py-4">{supplier}</td>
-                  <td className="px-6 py-4">{price}</td>
+                  <td className="px-6 py-4 font-bold ">{name}</td>
+                  <td className="px-6 py-4 text-stone-500">{supplier}</td>
+                  <td className="px-6 py-4 font-semibold ">{price}</td>
                   <td className="px-6 py-4 text-right">
                     <button
                       onClick={() => handleDeleteItem(_id)}
                       href="#"
-                      className="font-medium text-3xl text-blue-600 dark:text-blue-500 hover:underline"
+                      className="font-medium text-3xl text-red-600 dark:text-red-500 hover:underline"
                     >
                       <AiFillDelete></AiFillDelete>
                     </button>

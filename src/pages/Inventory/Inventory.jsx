@@ -136,12 +136,12 @@ const Inventory = () => {
             <input className="rounded" type="number" name="stock" id="" />
             <br />
             <input
-              className="bg-blue-500 px-6 cursor-pointer py-2 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"
+              className="bg-blue-500 px-6 cursor-pointer py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"
               type="submit"
               value="Add Stock"
             />
           </form>
-          <div className="mt-4">
+          <div className="mt-4 w-56 mx-auto">
             <Link
               to="/manageInventory"
               className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"
