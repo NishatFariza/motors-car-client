@@ -21,7 +21,7 @@ const Inventory = () => {
       .catch(function (error) {
         console.log(error);
       });
-  }, []);
+  }, [id]);
 
   const handleAddStock = (event) => {
     event.preventDefault();
@@ -91,20 +91,22 @@ const Inventory = () => {
   return (
     <div className="container mx-auto py-24">
       <div className="flex justify-between items-center">
-        <div className="border w-6/12 py-8 px-4">
-          <div className="">
+        <div className="border w-9/12 flex justify-around items-center">
+          <div className="w-5/12 ">
             <img className="w-full" src={img} alt="" />
           </div>
-          <h2>{name}</h2>
-          <p>{price}</p>
-          <p>{sold}</p>
-          <p>{supplier}</p>
-          <p>{quantity}</p>
-          <p>Id:{id}</p>
-          <div className="text-justify ">
-            <p>{description}</p>
+          <div className="w-5/12 py-5">
+            <h2>{name}</h2>
+            <p>{price}</p>
+            <p>{sold}</p>
+            <p>{supplier}</p>
+            <p>{quantity}</p>
+            <p>Id:{id}</p>
+            <div className="text-justify ">
+              <p>{description}</p>
+            </div>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-center items-start">
             <button
               onClick={handleOndDelivery}
               className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600"

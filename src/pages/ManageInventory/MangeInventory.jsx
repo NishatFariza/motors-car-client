@@ -1,9 +1,34 @@
+import axios from "axios";
 import React from "react";
+import toast from "react-hot-toast";
 
 import { AiFillDelete } from "react-icons/ai";
+import useCars from "../../Hooks/UseCars";
 
-const MangeInventory = ({ cars }) => {
-  const handleDeleteItem = () => {};
+const MangeInventory = () => {
+  const [cars, setCars] = useCars();
+
+  const handleDeleteItem = (id) => {
+    console.log(id);
+    const url = `http://localhost:5000/inventory/${id}`;
+    // console.log(url);
+    const confirm = window.confirm("Are You Sure!!");
+    if (confirm) {
+      axios
+        .delete(url)
+        .then(function (response) {
+          console.log(response);
+          if (response.data.deletedCount === 1) {
+            toast.success("Deleted Successfully");
+            const newCars = cars.filter((car) => car._id !== id);
+            setCars(newCars);
+          }
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+  };
   return (
     <div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -29,7 +54,7 @@ const MangeInventory = ({ cars }) => {
           </thead>
           <tbody>
             {cars.map((car) => {
-              const { name, price, img, supplier } = car;
+              const { name, price, img, supplier, _id } = car;
               return (
                 <tr
                   key={car._id}
@@ -46,7 +71,7 @@ const MangeInventory = ({ cars }) => {
                   <td className="px-6 py-4">{price}</td>
                   <td className="px-6 py-4 text-right">
                     <button
-                      onClick={handleDeleteItem}
+                      onClick={() => handleDeleteItem(_id)}
                       href="#"
                       className="font-medium text-3xl text-blue-600 dark:text-blue-500 hover:underline"
                     >
