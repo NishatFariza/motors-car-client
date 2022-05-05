@@ -11,6 +11,7 @@ import Footer from './pages/Shared/Footer/Footer';
 import Header from './pages/Shared/Header/Header';
 import ManageInventorys from './pages/ManageInventorys/ManageInventorys.jsx'
 import NotFound from './pages/Shared/NotFound/NotFound';
+import AddItem from './pages/AddItem/AddItem';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/signUp' element={<SignUp></SignUp>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/manageInventory' element={<ManageInventorys></ManageInventorys>}></Route>
+        <Route path='/addItem' element={<AddItem></AddItem>}></Route>
         
         <Route path='/inventory/:id' element={<Inventory></Inventory>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
