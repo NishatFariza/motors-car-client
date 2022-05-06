@@ -11,29 +11,41 @@ const Header = () => {
           <img src={logo} alt="" />
         </NavLink>
         <div>
-          <NavLink className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')}  to="/">
+          <NavLink
+            className={({ isActive }) => (isActive ? "activeLink" : "navLink")}
+            to="/"
+          >
             HOME
           </NavLink>
-          <NavLink className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')} to="/blogs">
+          <NavLink
+            className={({ isActive }) => (isActive ? "activeLink" : "navLink")}
+            to="/blogs"
+          >
             BLOGS
           </NavLink>
           <NavLink
-            className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')}
+            className={({ isActive }) => (isActive ? "activeLink" : "navLink")}
             to="/manageInventory"
           >
             MANAGE INVENTORY
           </NavLink>
-          <NavLink className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')} to="/addItem">
+          <NavLink
+            className={({ isActive }) => (isActive ? "activeLink" : "navLink")}
+            to="/addItem"
+          >
             ADD ITEM
           </NavLink>
-          <NavLink className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')} to="/myItem">
+          <NavLink
+            className={({ isActive }) => (isActive ? "activeLink" : "navLink")}
+            to="/myItem"
+          >
             MY ITEM
           </NavLink>
-          <NavLink className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')} to="/login">
+          <NavLink
+            className={({ isActive }) => (isActive ? "activeLink" : "navLink")}
+            to="/login"
+          >
             LOGIN
-          </NavLink>
-          <NavLink className={({ isActive }) => (isActive ? 'activeLink' : 'navLink')} to="/LogOut">
-            LOG OUT
           </NavLink>
         </div>
       </div>

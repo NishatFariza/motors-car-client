@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
+import { useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import Loading from "../../Loading/Loading";
 
 const SocialLogIn = () => {
   //get user social logIn
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, userGoogle, loading, error] =
+    useSignInWithGoogle(auth);
+
+  if (error) {
+    toast.error("Something Error");
+    console.log(error);
+  }
+
+ 
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   return (
     <div>

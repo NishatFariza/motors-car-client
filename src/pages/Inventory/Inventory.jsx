@@ -85,7 +85,11 @@ const Inventory = () => {
       .then(function (response) {
         // console.log(response);
         if (response.data.modifiedCount === 1) {
-          toast.success("Item Delivered");
+          toast.success("1 Item Delivered");
+        }
+        if (quantity === 0) {
+          toast.success("Negative Value isn't Delivered");
+          return;
         }
       })
       .catch(function (error) {

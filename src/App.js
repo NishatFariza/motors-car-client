@@ -12,6 +12,7 @@ import Header from './pages/Shared/Header/Header';
 import ManageInventorys from './pages/ManageInventorys/ManageInventorys.jsx'
 import NotFound from './pages/Shared/NotFound/NotFound';
 import AddItem from './pages/AddItem/AddItem';
+import RequireAuth from './RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -23,10 +24,22 @@ function App() {
         <Route path='/logIn' element={<LogIn></LogIn>}></Route>
         <Route path='/signUp' element={<SignUp></SignUp>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/manageInventory' element={<ManageInventorys></ManageInventorys>}></Route>
-        <Route path='/addItem' element={<AddItem></AddItem>}></Route>
+        <Route path='/manageInventory' element={
+          <RequireAuth>
+            <ManageInventorys></ManageInventorys>
+          </RequireAuth>
+        }></Route>
+        <Route path='/addItem' element={
+          <RequireAuth>
+            <AddItem></AddItem>
+          </RequireAuth>
+        }></Route>
         
-        <Route path='/inventory/:id' element={<Inventory></Inventory>}></Route>
+        <Route path='/inventory/:id' element={
+          <RequireAuth>
+            <Inventory></Inventory>
+          </RequireAuth>
+        }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

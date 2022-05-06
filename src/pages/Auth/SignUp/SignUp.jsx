@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./SignUp.css";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
-import { toast } from "react-toastify";
 import SocialLogIn from "../SocialLogIn/SocialLogIn";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
   const [email, setEmail] = useState();
@@ -13,6 +13,10 @@ const SignUp = () => {
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const [error, setError] = useState();
+
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
 
   const [createUserWithEmailAndPassword, user, loading, UserError] =
     useCreateUserWithEmailAndPassword(auth);
@@ -28,6 +32,10 @@ const SignUp = () => {
     setEmail(event.target.value);
   };
   const handlePasswordBlur = (event) => {
+    if (event.target.value.length < 6) {
+      toast.error("Password is too short");
+      return;
+    }
     setPassword(event.target.value);
   };
   const handleConfirmPasswordBlur = (event) => {
@@ -40,8 +48,25 @@ const SignUp = () => {
     setLastName(event.target.value);
   };
 
+  useEffect(() => {
+    if (user) {
+      toast.success("SignUp Successful");
+      navigate(from);
+    }
+  }, [navigate, user, from]);
+
   const handleFormSubmit = (event) => {
     event.preventDefault();
+    if (email === "" || password === "" || confirmPassword === "") {
+      toast.error("Input field is empty");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      toast.error("Password is not matched");
+      return;
+    }
+    // console.log(email, password);
     createUserWithEmailAndPassword(email, password);
   };
   return (
@@ -58,7 +83,7 @@ const SignUp = () => {
             name="floating_email"
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
-            required=""
+            required
           />
           <label
             htmlFor="floating_email"
@@ -75,7 +100,7 @@ const SignUp = () => {
             id="floating_password"
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
-            required=""
+            required
           />
           <label
             htmlFor="floating_password"
@@ -92,7 +117,7 @@ const SignUp = () => {
             id="floating_repeat_password"
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
-            required=""
+            required
           />
           <label
             htmlFor="floating_repeat_password"
@@ -110,7 +135,7 @@ const SignUp = () => {
               id="floating_first_name"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
-              required=""
+              required
             />
             <label
               htmlFor="floating_first_name"
@@ -127,7 +152,7 @@ const SignUp = () => {
               id="floating_last_name"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
-              required=""
+              required
             />
             <label
               htmlFor="floating_last_name"

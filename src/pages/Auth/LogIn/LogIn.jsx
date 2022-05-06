@@ -1,19 +1,42 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./LogIn.css";
 import SocialLogIn from "../SocialLogIn/SocialLogIn";
-import {
-  useSendPasswordResetEmail,
-  useSignInWithEmailAndPassword,
-} from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import toast from "react-hot-toast";
+import { sendPasswordResetEmail } from "firebase/auth";
+import Loading from "../../Loading/Loading";
 
 const LogIn = () => {
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+
+  //login error handle
+
+  useEffect(() => {
+    if (error) {
+      console.log(error.code);
+      if (error.code === "auth/wrong-password") {
+        toast.error("Password went Wrong");
+      }
+      if (error.code === "auth/user-not-found") {
+        toast.error("User Not Found. Please!! Sign Up");
+      }
+    }
+    if (user) {
+      toast.success("LogIn Successful");
+
+      navigate(from);
+    }
+  }, [navigate, user, from, error]);
 
   //login user data email and password
   const handleEmailBlur = (event) => {
@@ -29,9 +52,24 @@ const LogIn = () => {
     signInWithEmailAndPassword(email, password);
   };
 
-  //reset password use google
-  const [sendPasswordResetEmail, sending, passError] =
-    useSendPasswordResetEmail(auth);
+  //reset password
+  const handleResetPassword = () => {
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        toast.success("Mail Sent!", { id: "signUp" });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        if (errorCode == "auth/missing-email") {
+          toast.error("Please Enter Email", { id: "signUp" });
+          console.log(errorCode);
+        }
+      });
+  };
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   return (
     <div className="lg:w-4/12 w-10/12 mx-auto py-7 border rounded px-6 my-20 login-form">
@@ -99,9 +137,12 @@ const LogIn = () => {
       <div className="my-6">
         <p className="text-stone-700 text-sm">
           Forget Password?
-          <Link to="/signUp" className="text-sm lg:ml-3 link-text">
+          <button
+            onClick={handleResetPassword}
+            className="text-sm lg:ml-3 link-text"
+          >
             Click Reset!
-          </Link>
+          </button>
         </p>
         <p className="mt-1 text-stone-700 text-sm ">
           Create a new Account?
