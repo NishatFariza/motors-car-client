@@ -18,7 +18,10 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Toaster></Toaster>
+      <Toaster
+            position="top-right"
+            reverseOrder={false}
+          />
       <Routes>
         <Route path='/' element={<Home></Home>}>Home</Route>
         <Route path='/logIn' element={<LogIn></LogIn>}></Route>

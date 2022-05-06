@@ -28,6 +28,10 @@ const Inventory = () => {
     event.preventDefault();
     const newStock = parseInt(event.target.stock.value);
     // console.log(newStock);
+    if (newStock < 0) {
+      toast.error("Negative Value isn't Delivered");
+      return;
+    }
     if (isNaN(newStock)) {
       toast.error("Please!! Enter Some Item");
       return;
@@ -65,6 +69,10 @@ const Inventory = () => {
   const handleOndDelivery = (event) => {
     const totalStock = parseInt(quantity) - 1;
     // console.log(totalStock);
+    if (totalStock < 0) {
+      toast.error("Stock Out");
+      return;
+    }
     const updateCar = {
       img: img,
       name: name,
@@ -84,12 +92,9 @@ const Inventory = () => {
       .put(url, updateCar)
       .then(function (response) {
         // console.log(response);
+
         if (response.data.modifiedCount === 1) {
           toast.success("1 Item Delivered");
-        }
-        if (quantity === 0) {
-          toast.success("Negative Value isn't Delivered");
-          return;
         }
       })
       .catch(function (error) {
@@ -102,22 +107,28 @@ const Inventory = () => {
       <div className="flex justify-between items-center">
         <div className="border card-shadow w-9/12 rounded">
           <div className=" flex justify-between">
-            <div className="w-6/12 h-full rounded">
+            <div className="w-6/12 h-full rounded py-3 pl-2">
               <img className="w-full h-full rounded" src={img} alt="" />
             </div>
 
-            <div className="w-6/12 px-10 pt-6">
+            <div className="w-6/12 px-10">
               <div className="flex justify-between items-center">
                 <h2 className="text-3xl text-blue-400 hover:text-yellow-400 duration-500 font-bold">
                   {name}
                 </h2>
                 <div className="items-end flex justify-end">
-                  <button
-                    onClick={handleOndDelivery}
-                    className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600"
-                  >
-                    Delivered
-                  </button>
+                  {quantity === 0 ? (
+                    <button className="border border-yellow-400 px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600">
+                      Stock Out
+                    </button>
+                  ) : (
+                    <button
+                      onClick={handleOndDelivery}
+                      className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600"
+                    >
+                      Delivered
+                    </button>
+                  )}
                 </div>
               </div>
               <p className="text-stone-500 font-semibold mt-2">
@@ -131,7 +142,7 @@ const Inventory = () => {
               <p className="text-stone-500 font-semibold mt-0">
                 <strong className="primary-color">Sold: </strong> {sold}
               </p>
-              <p className="text-yellow-500 font-semibold mt-0">{price}</p>
+              <p className="text-yellow-500 font-semibold mt-0">${price}</p>
               <p className="text-stone-700 font-semibold mt-0">Id: {id}</p>
               <div className="text-justify text-stone-500 mt-2">
                 <p>{description}</p>
