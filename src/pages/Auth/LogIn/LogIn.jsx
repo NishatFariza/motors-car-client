@@ -72,7 +72,7 @@ const LogIn = () => {
   }
 
   return (
-    <div className="lg:w-4/12 w-10/12 mx-auto py-7 border rounded px-6 my-20 login-form">
+    <div className="sm:w-4/12 w-11/12 mx-auto py-7 border rounded px-6 my-20 login-form">
       <h3 className="mb-7 text-3xl font-medium text-center text-slate-700">
         LogIn Form
       </h3>

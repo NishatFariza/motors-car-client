@@ -70,7 +70,7 @@ const SignUp = () => {
     createUserWithEmailAndPassword(email, password);
   };
   return (
-    <div className="lg:w-6/12 w-10/12 mx-auto border rounded py-12 px-6 my-20 signUp-form">
+    <div className="sm:w-6/12 w-11/12 mx-auto border rounded py-12 px-6 my-20 signUp-form">
       <h3 className="mb-7 text-3xl font-medium text-center text-slate-700">
         SignUp
       </h3>
