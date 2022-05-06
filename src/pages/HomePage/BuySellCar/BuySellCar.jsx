@@ -11,7 +11,7 @@ const BuySellCar = () => {
             LOOKING FOR A CAR?
           </h4>
           <p className="text-stone-700  sm:text-xl text-sm ">
-            Our cars are delivered fully-registered with all requirements
+            Our cars are delivered full-registered with all requirements
             completed. We’ll deliver your car wherever you are.
           </p>
           <button className=" bg-blue-500 px-6 py-2 rounded hover:bg-yellow-400  duration-500 font-semibold text-white my-6">
