@@ -11,10 +11,10 @@ const Footer = () => {
   const today = new Date();
   const year = today.getFullYear();
   return (
-    <footer className="shared-bg py-8">
-      <div className="w-10/12 mx-auto container flex justify-between items-center footer-divider pb-4">
+    <footer className="shared-bg sm:py-8 py-4">
+      <div className="w-10/12 mx-auto container flex justify-between items-center footer-divider sm:pb-4 pb-2">
         <div className="w-4/12">
-          <img className="" src={footerLogo} alt="" />
+          <img className="sm:w-4/12 w-2/12" src={footerLogo} alt="" />
         </div>
 
         <div className="flex justify-center items-center">
@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="relative">
             <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
               <svg
-                className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                className="sm:w-5 sm:h-5 w-3 h-3 text-gray-500 dark:text-gray-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -74,9 +74,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-10/12 mx-auto container flex justify-between items-center pb-4 mt-4">
+      <div className="w-10/12 mx-auto container flex justify-between items-center pb-4 sm:mt-4 mt-2">
         <div className="w-4/12">
-          <small className="footer-text">Copyright &copy; {year}. Motors</small>
+          <small className="footer-text sm:text-sm text-xs">
+            Copyright &copy; {year}. Motors
+          </small>
         </div>
         <div className="flex">
           <BsFacebook className="mr-4 text-xl footer-icon duration-500 cursor-pointer" />
