@@ -41,7 +41,7 @@ const AddItem = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="py-10 px-6 w-8/12 mx-auto border my-24">
+    <div className="py-10 px-6 sm:w-8/12 w-11/12 mx-auto border rounded shadow-lg my-24">
       <form onSubmit={handleAddItem}>
         <div className="grid xl:grid-cols-2 xl:gap-6">
           <div className="relative z-0 w-full mb-6 group">
