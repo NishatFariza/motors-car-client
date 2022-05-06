@@ -11,8 +11,8 @@ const Footer = () => {
   const today = new Date();
   const year = today.getFullYear();
   return (
-    <footer className="shared-bg py-12">
-      <div className="w-10/12 mx-auto container flex justify-between items-center footer-divider pb-6">
+    <footer className="shared-bg py-8">
+      <div className="w-10/12 mx-auto container flex justify-between items-center footer-divider pb-4">
         <div className="w-4/12">
           <img className="" src={footerLogo} alt="" />
         </div>

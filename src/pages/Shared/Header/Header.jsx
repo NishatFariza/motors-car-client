@@ -13,42 +13,42 @@ const Header = () => {
     <>
       <nav className=" shared-bg py-5 text-white">
         <div className="relative z-20 text-white">
-          <div class="px-6 md:px-12 lg:container lg:mx-auto lg:px-6 lg:py-2">
-            <div class="flex items-center justify-between">
-              <div class="relative z-20 flex justify-center items-center">
+          <div className="px-6 md:px-12 lg:container lg:mx-auto lg:px-6 lg:py-2">
+            <div className="flex items-center justify-between">
+              <div className="relative z-20 flex justify-center items-center">
                 <NavLink to="/" className="cursor-pointer">
                   <img src={logo} alt="" />
                 </NavLink>
               </div>
 
-              <div class="flex items-center justify-end ">
+              <div className="flex items-center justify-end ">
                 <input
                   type="checkbox"
                   name="hamburger"
                   id="hamburger"
-                  class="peer hidden"
+                  className="peer hidden"
                 />
                 <label
-                  for="hamburger"
-                  class="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden"
+                  htmlFor="hamburger"
+                  className="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden"
                 >
                   <div
                     aria-hidden="true"
-                    class="m-auto h-0.5 w-6 rounded bg-sky-900 transition duration-300"
+                    className="m-auto h-0.5 w-6 rounded bg-sky-900 transition duration-300"
                   ></div>
                   <div
                     aria-hidden="true"
-                    class="m-auto mt-2 h-0.5 w-6 rounded bg-sky-900 transition duration-300"
+                    className="m-auto mt-2 h-0.5 w-6 rounded bg-sky-900 transition duration-300"
                   ></div>
                   <div
                     aria-hidden="true"
-                    class="m-auto mt-2 h-0.5 w-6 rounded bg-sky-900 transition duration-300"
+                    className="m-auto mt-2 h-0.5 w-6 rounded bg-sky-900 transition duration-300"
                   ></div>
                 </label>
 
-                <div class="peer-checked:translate-x-0 fixed inset-0 w-[calc(100%-4.5rem)] translate-x-[-100%] shared-bg border-r shadow-xl transition duration-300 lg:border-r-0 lg:w-auto lg:static lg:shadow-none lg:translate-x-0">
-                  <div class="flex flex-col h-full justify-between lg:items-center lg:flex-row">
-                    <ul class=" pt-32 text-white space-y-8 lg:space-y-0 lg:flex lg:pt-0">
+                <div className="peer-checked:translate-x-0 fixed inset-0 w-[calc(100%-4.5rem)] translate-x-[-100%] shared-bg  shadow-xl transition duration-300  lg:w-auto lg:static lg:shadow-none lg:translate-x-0">
+                  <div className="flex flex-col h-full justify-between lg:items-center lg:flex-row">
+                    <ul className="px-6 pt-24 sm:pt-32 text-white space-y-0 md:px-6 lg:space-y-0 lg:flex lg:space-x-6 lg:pt-0">
                       <li>
                         <NavLink
                           className={({ isActive }) =>
@@ -103,11 +103,8 @@ const Header = () => {
                           </li>
                         </>
                       )}
-                    </ul>
-
-                    <div class=" py-8 md:py-16  lg:py-0 lg:pr-0">
-                      {user ? (
-                        <div className="flex justify-center items-center">
+                      <li>
+                        {user ? (
                           <NavLink
                             onClick={() => signOut(auth)}
                             to="login"
@@ -117,18 +114,18 @@ const Header = () => {
                           >
                             LogOut
                           </NavLink>
-                        </div>
-                      ) : (
-                        <NavLink
-                          className={({ isActive }) =>
-                            isActive ? "activeLink" : "navLink"
-                          }
-                          to="/login"
-                        >
-                          LOGIN
-                        </NavLink>
-                      )}
-                    </div>
+                        ) : (
+                          <NavLink
+                            className={({ isActive }) =>
+                              isActive ? "activeLink" : "navLink"
+                            }
+                            to="/login"
+                          >
+                            LOGIN
+                          </NavLink>
+                        )}
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

@@ -104,15 +104,15 @@ const Inventory = () => {
 
   return (
     <div className="container mx-auto py-24">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center h-fit">
         <div className="border card-shadow w-9/12 rounded">
-          <div className=" flex justify-between">
-            <div className="w-6/12 h-full rounded py-3 pl-2">
+          <div className=" flex justify-between items-center">
+            <div className="w-6/12 h-full rounded pl-2">
               <img className="w-full h-full rounded" src={img} alt="" />
             </div>
 
             <div className="w-6/12 px-10">
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-5">
                 <h2 className="text-3xl text-blue-400 hover:text-yellow-400 duration-500 font-bold">
                   {name}
                 </h2>
@@ -145,7 +145,7 @@ const Inventory = () => {
               <p className="text-yellow-500 font-semibold mt-0">${price}</p>
               <p className="text-stone-700 font-semibold mt-0">Id: {id}</p>
               <div className="text-justify text-stone-500 mt-2">
-                <p>{description}</p>
+                <p className="mb-5">{description}</p>
               </div>
             </div>
           </div>
