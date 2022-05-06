@@ -10,16 +10,16 @@ import {
 
 const Blogs = () => {
   return (
-    <div className="mx-auto w-9/12 container py-20">
-      <h2 className="text-center mb-3 text-4xl font-bold primary-color">
+    <div className="mx-auto w-9/12 container sm:py-20 py-10">
+      <h2 className="text-center mb-3 sm:text-4xl text-2xl font-bold primary-color">
         FREQUENTLY ASK <span className="text-yellow-400">QUESTION</span>
       </h2>
       <div className="h-1 w-24 rounded-lg bg-blue-400 mx-auto mb-12"></div>
       <Accordion className="rounded duration-500 ">
         <AccordionItem className="box-shadow rounded duration-500">
-          <AccordionItemHeading className="border-t  py-6 px-3 rounded">
-            <AccordionItemButton className="text-2xl font-bold text-blue-400 flex items-center">
-              <AiFillQuestionCircle className="mr-2"></AiFillQuestionCircle>
+          <AccordionItemHeading className="border-t  sm:py-6 py-3 px-3 rounded">
+            <AccordionItemButton className="sm:text-2xl text-xl font-bold text-blue-400 flex items-start">
+              <AiFillQuestionCircle className="mr-2 sm:text-2xl text-8xl flex items-start"></AiFillQuestionCircle>
               What is The Different Between JavaScript And NodeJS?
             </AccordionItemButton>
           </AccordionItemHeading>
@@ -51,8 +51,8 @@ const Blogs = () => {
         </AccordionItem>
         <AccordionItem className="box-shadow border-y rounded duration-500">
           <AccordionItemHeading className="border-y-b  py-6 px-3 rounded">
-            <AccordionItemButton className="text-2xl font-bold text-blue-400 flex items-center">
-              <AiFillQuestionCircle className="mr-2"></AiFillQuestionCircle>
+            <AccordionItemButton className="sm:text-2xl text-xl font-bold text-blue-400 flex items-center">
+              <AiFillQuestionCircle className="mr-2 sm:text-2xl text-8xl flex items-start"></AiFillQuestionCircle>
               When Should We Use NodeJS? And When Should We Use MongoDB?
             </AccordionItemButton>
           </AccordionItemHeading>
@@ -91,8 +91,8 @@ const Blogs = () => {
         </AccordionItem>
         <AccordionItem className="box-shadow border-b rounded duration-500">
           <AccordionItemHeading className="  py-6 px-3 rounded">
-            <AccordionItemButton className="text-2xl font-bold text-blue-400 flex items-center">
-              <AiFillQuestionCircle className="mr-2"></AiFillQuestionCircle>
+            <AccordionItemButton className="sm:text-2xl text-xl font-bold text-blue-400 flex items-center">
+              <AiFillQuestionCircle className="mr-2 sm:text-2xl text-8xl flex items-start"></AiFillQuestionCircle>
               What is The Different Between SQL And NoSQL?
             </AccordionItemButton>
           </AccordionItemHeading>
@@ -133,8 +133,8 @@ const Blogs = () => {
         </AccordionItem>
         <AccordionItem className="box-shadow border-b rounded duration-500">
           <AccordionItemHeading className=" py-6 px-3 rounded">
-            <AccordionItemButton className="text-2xl font-bold text-blue-400 flex items-center">
-              <AiFillQuestionCircle className="mr-2"></AiFillQuestionCircle>
+            <AccordionItemButton className="sm:text-2xl text-xl font-bold text-blue-400 flex items-center">
+              <AiFillQuestionCircle className="mr-2 sm:text-2xl text-8xl flex items-start"></AiFillQuestionCircle>
               What is The Purpose of JWT? How dose Work JWT?
             </AccordionItemButton>
           </AccordionItemHeading>
