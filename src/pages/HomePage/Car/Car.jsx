@@ -6,11 +6,11 @@ const Car = ({ car }) => {
 
   const { name, img, price, description, supplier, quantity } = car;
   return (
-    <div className="border rounded-2xl box-shadow duration-500 cursor-pointer">
+    <div className="w-11/12 sm:w-auto mx-auto border rounded-2xl box-shadow duration-500 cursor-pointer">
       <div className="rounded-2xl">
         <img className="rounded-2xl" src={img} alt="" />
       </div>
-      <div className="py-8 px-4">
+      <div className="sm:py-8 py-4 px-4">
         <h3 className="text-2xl font-semibold text-blue-400 hover:text-yellow-400 duration-500 ">
           {name}
         </h3>
