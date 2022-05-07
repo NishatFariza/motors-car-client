@@ -33,12 +33,15 @@ const LogIn = () => {
         toast.error("User Not Found. Please!! Sign Up");
       }
     }
+  }, [error]);
+
+  useEffect(() => {
     if (user) {
       toast.success("LogIn Successful");
 
-      navigate(from);
+      navigate(from, { replace: true });
     }
-  }, [navigate, user, from, error]);
+  }, [user]);
 
   //login user data email and password
   const handleEmailBlur = (event) => {
@@ -52,13 +55,9 @@ const LogIn = () => {
     event.preventDefault();
 
     await signInWithEmailAndPassword(email, password);
-    const { data } = await axios
-      .post("http://localhost:5000/login", { email })
-      .then(function (response) {
-        console.log(response);
-      });
-
-    console.log(data);
+    const { data } = await axios.post("http://localhost:5000/login", { email });
+    localStorage.setItem("AccessToken", data.accessToken);
+    console.log(data.accessToken);
   };
 
   //reset password

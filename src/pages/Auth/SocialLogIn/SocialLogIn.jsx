@@ -22,7 +22,7 @@ const SocialLogIn = () => {
     if (userGoogle) {
       toast.success("LogIn Successful");
 
-      navigate(from);
+      navigate(from, { replace: true });
     }
   }, [userGoogle, from, navigate]);
 

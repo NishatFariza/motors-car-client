@@ -88,12 +88,10 @@ const Blogs = () => {
               would typically use some form of database. There are dozens of
               popular databases. MongoDB is one such database. MariaDB, MySql,
               CouchDB, DynamoDB (on AWS), Postgres are examples of other
-              databases.
-              <p className="text-stone-600 mt-3">
-                <strong>
-                  Here are the some main reasons for using MongoDB:
-                </strong>
-              </p>
+              databases. <br />
+              <strong className="text-stone-600 mt-4">
+                Here are the some main reasons for using MongoDB:
+              </strong>
               <li>
                 MongoDB is very flexible and adaptable to real business world
                 situations and requirements.
