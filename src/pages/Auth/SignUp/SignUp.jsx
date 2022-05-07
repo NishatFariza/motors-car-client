@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import SocialLogIn from "../SocialLogIn/SocialLogIn";
 import toast from "react-hot-toast";
+import Loading from "../../Loading/Loading";
 
 const SignUp = () => {
   const [email, setEmail] = useState();
@@ -54,6 +55,10 @@ const SignUp = () => {
       navigate(from, { replace: true });
     }
   }, [navigate, user, from]);
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   const handleFormSubmit = (event) => {
     event.preventDefault();

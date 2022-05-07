@@ -15,7 +15,11 @@ const MyItem = () => {
   useEffect(() => {
     const url = `http://localhost:5000/inventory?email=${user.email}`;
     axios
-      .get(url)
+      .get(url, {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("AccessToken")}`,
+        },
+      })
       .then((response) => {
         setCars(response.data);
       })
