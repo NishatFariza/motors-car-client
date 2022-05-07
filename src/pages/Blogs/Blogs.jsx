@@ -19,7 +19,7 @@ const Blogs = () => {
         <AccordionItem className="box-shadow rounded duration-500">
           <AccordionItemHeading className="border-t  sm:py-6 py-3 px-3 rounded">
             <AccordionItemButton className="sm:text-2xl text-xl font-bold text-blue-400 flex items-start">
-              <AiFillQuestionCircle className="mr-2 sm:text-2xl text-8xl flex items-start"></AiFillQuestionCircle>
+              <AiFillQuestionCircle className="mr-2 sm:text-2xl text-4xl flex items-start"></AiFillQuestionCircle>
               What is The Different Between JavaScript And NodeJS?
             </AccordionItemButton>
           </AccordionItemHeading>
@@ -52,7 +52,7 @@ const Blogs = () => {
         <AccordionItem className="box-shadow border-y rounded duration-500">
           <AccordionItemHeading className="border-y-b  py-6 px-3 rounded">
             <AccordionItemButton className="sm:text-2xl text-xl font-bold text-blue-400 flex items-center">
-              <AiFillQuestionCircle className="mr-2 sm:text-2xl text-8xl flex items-start"></AiFillQuestionCircle>
+              <AiFillQuestionCircle className="mr-2 sm:text-2xl text-4xl flex items-start"></AiFillQuestionCircle>
               When Should We Use NodeJS? And When Should We Use MongoDB?
             </AccordionItemButton>
           </AccordionItemHeading>
@@ -92,7 +92,7 @@ const Blogs = () => {
         <AccordionItem className="box-shadow border-b rounded duration-500">
           <AccordionItemHeading className="  py-6 px-3 rounded">
             <AccordionItemButton className="sm:text-2xl text-xl font-bold text-blue-400 flex items-center">
-              <AiFillQuestionCircle className="mr-2 sm:text-2xl text-8xl flex items-start"></AiFillQuestionCircle>
+              <AiFillQuestionCircle className="mr-2 sm:text-2xl text-4xl flex items-start"></AiFillQuestionCircle>
               What is The Different Between SQL And NoSQL?
             </AccordionItemButton>
           </AccordionItemHeading>
@@ -134,7 +134,7 @@ const Blogs = () => {
         <AccordionItem className="box-shadow border-b rounded duration-500">
           <AccordionItemHeading className=" py-6 px-3 rounded">
             <AccordionItemButton className="sm:text-2xl text-xl font-bold text-blue-400 flex items-center">
-              <AiFillQuestionCircle className="mr-2 sm:text-2xl text-8xl flex items-start"></AiFillQuestionCircle>
+              <AiFillQuestionCircle className="mr-2 sm:text-2xl text-4xl flex items-start"></AiFillQuestionCircle>
               What is The Purpose of JWT? How dose Work JWT?
             </AccordionItemButton>
           </AccordionItemHeading>

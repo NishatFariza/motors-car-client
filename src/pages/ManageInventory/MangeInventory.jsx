@@ -40,7 +40,7 @@ const MangeInventory = () => {
     });
   };
   return (
-    <div className="pb-20 mx-10 pt-5">
+    <div className="pb-20 sm:mx-10 mx-1 pt-5">
       <div className="mb-8 flex justify-end">
         <Link
           to="/addItem"
@@ -54,19 +54,34 @@ const MangeInventory = () => {
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" className="px-6 py-3">
-                Product Image
+              <th
+                scope="col"
+                className="px-0.5 sm:px-6 sm:ml-0 ml-2 py-3 sm:text-base text-xs"
+              >
+                Image
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th
+                scope="col"
+                className="px-0.5 sm:px-6 py-3 sm:text-base text-xs"
+              >
                 Name
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th
+                scope="col"
+                className="px-0.5 sm:px-6 py-3 sm:text-base text-xs"
+              >
                 Supplier
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th
+                scope="col"
+                className="px-0.5 sm:px-6 py-3 sm:text-base text-xs"
+              >
                 Price
               </th>
-              <th scope="col" className="px-6 py-3 text-right">
+              <th
+                scope="col"
+                className="px-0.5 sm:px-6 py-3 text-right sm:text-base text-xs"
+              >
                 Delete
               </th>
             </tr>
@@ -82,19 +97,25 @@ const MangeInventory = () => {
                 >
                   <th
                     scope="row"
-                    className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+                    className="sm:px-6 px-2 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
                   >
                     <div
                       className="
-                   w-20 rounded"
+                   sm:w-20 w-14 rounded"
                     >
                       <img className="rounded" src={img} alt="" />
                     </div>
                   </th>
-                  <td className="px-6 py-4 font-bold ">{name}</td>
-                  <td className="px-6 py-4 text-stone-500">{supplier}</td>
-                  <td className="px-6 py-4 font-semibold ">${price}</td>
-                  <td className="px-6 py-4 text-right">
+                  <td className="px-0.5 sm:px-6 sm:w-auto w-12 py-4 font-bold sm:text-base text-xs ">
+                    {name}
+                  </td>
+                  <td className="px-0.5 sm:px-6 sm:w-auto w-12 py-4 text-stone-500 sm:text-base text-xs">
+                    {supplier}
+                  </td>
+                  <td className="px-0.5 sm:px-6  py-4 sm:font-semibold sm:text-base text-xs">
+                    ${price}
+                  </td>
+                  <td className="px-0.5 sm:px-6 py-4 text-right">
                     <button
                       onClick={() => handleDeleteItem(_id)}
                       href="#"

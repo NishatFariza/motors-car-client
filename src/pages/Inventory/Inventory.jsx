@@ -43,7 +43,7 @@ const Inventory = () => {
       name: name,
       price: price,
       supplier: supplier,
-      sold: sold,
+      sold: `${totalStock > 0 ? "Available" : "Sold Out"}`,
       description,
       quantity: totalStock,
       description: description,
@@ -78,7 +78,7 @@ const Inventory = () => {
       name: name,
       price: price,
       supplier: supplier,
-      sold: `${totalStock < 1 ? "Sold Out" : sold}`,
+      sold: `${totalStock > 0 ? "Available" : "Sold Out"}`,
       description,
       quantity: totalStock,
       description: description,
@@ -103,17 +103,17 @@ const Inventory = () => {
   };
 
   return (
-    <div className="container mx-auto py-24">
-      <div className="flex justify-between items-center h-fit">
-        <div className="border card-shadow w-9/12 rounded">
-          <div className=" flex justify-between items-center">
-            <div className="w-6/12 h-full rounded pl-2">
+    <div className="container mx-auto sm:py-24 py-16">
+      <div className="flex flex-col sm:flex-row justify-between items-center h-fit">
+        <div className="border card-shadow sm:w-9/12 w-11/12 rounded">
+          <div className=" flex  flex-col sm:flex-row justify-between items-center">
+            <div className="sm:w-6/12 w-11/12 sm:pt-0 pt-4 h-full rounded pl-2">
               <img className="w-full h-full rounded" src={img} alt="" />
             </div>
 
-            <div className="w-6/12 px-10">
-              <div className="flex justify-between items-center mt-5">
-                <h2 className="text-3xl text-blue-400 hover:text-yellow-400 duration-500 font-bold">
+            <div className="sm:w-6/12 w-11/12 sm:px-10 px-3">
+              <div className="flex flex-col sm:flex-row justify-between items-center mt-5">
+                <h2 className="sm:text-3xl text-2xl text-blue-400 hover:text-yellow-400 duration-500 font-bold">
                   {name}
                 </h2>
                 <div className="items-end flex justify-end">
@@ -150,7 +150,7 @@ const Inventory = () => {
             </div>
           </div>
         </div>
-        <div className="w-3/12 text-center">
+        <div className="sm:w-3/12 w-11/12 mx-auto sm:mx-0 sm:mt-0 mt-8  text-center">
           <form onSubmit={handleAddStock}>
             <input className="rounded" type="number" name="stock" id="" />
             <br />
@@ -160,7 +160,7 @@ const Inventory = () => {
               value="Add Stock"
             />
           </form>
-          <div className="mt-4 w-56 mx-auto">
+          <div className="sm:mt-4 mt-10 w-56 mx-auto">
             <Link
               to="/manageInventory"
               className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"

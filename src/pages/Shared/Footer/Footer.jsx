@@ -12,13 +12,13 @@ const Footer = () => {
   const year = today.getFullYear();
   return (
     <footer className="shared-bg sm:py-8 py-4">
-      <div className="w-10/12 mx-auto container flex justify-between items-center footer-divider sm:pb-4 pb-2">
+      <div className="w-10/12 mx-auto container flex sm:flex-row flex-col justify-between items-center footer-divider sm:pb-4 pb-2 ">
         <div className="w-4/12">
-          <img className="sm:w-4/12 w-2/12" src={footerLogo} alt="" />
+          <img className="" src={footerLogo} alt="" />
         </div>
 
-        <div className="flex justify-center items-center">
-          <div className="mr-10">
+        <div className="flex flex-col sm:flex-row justify-center items-center">
+          <div className="sm:mr-10 sm:my-0 my-2">
             <Link
               to="/"
               className="footer-text duration-500 text-sm mr-3 hover:text-white"
