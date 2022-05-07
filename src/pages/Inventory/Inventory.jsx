@@ -119,7 +119,7 @@ const Inventory = () => {
                 <div className="items-end flex justify-end">
                   {quantity === 0 ? (
                     <button className="border border-yellow-400 px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600">
-                      Stock Out
+                      StockOut
                     </button>
                   ) : (
                     <button

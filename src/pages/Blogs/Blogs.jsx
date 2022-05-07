@@ -59,33 +59,30 @@ const Blogs = () => {
           <AccordionItemPanel>
             <p className="px-6 pt-3 border-t">
               <strong className="underline primary-color font-bold text-justify">
-                Purpose Of NodeJS:
+                Reasons for using NodeJS:
               </strong>
-              Node.js is an open source, a server-side script which runs on the
-              top of Google’s open-source scripting engine V8. Node.js is fast,
-              lightweight and efficient. It uses the asynchronous mode of
-              operation, event-driven Input/Output rather than using the
-              traditional threads or separate threads for each process.These are
-              the libraries which are built by the awesome community which will
-              solve almost all the generic problems related to the
-              Node.js.Overall it increases the efficiency of the development
-              process as it fills the gap between frontend and backend
-              applications.
+              Nodejs is a Javascript engine that you can write any application
+              you want with (by programming in the Javascript language). It runs
+              your Javascript code. Most commonly, it is used to build servers
+              that can respond to web requests, though it can be used for lots
+              of other types of code too.Any project needs a programming
+              environment and a runtime library that offers you basic
+              programming tools/support and can compile and/or interpret your
+              code. Nodejs is such as tool for the Javascript programming
+              language. There are other similar tools for other languages such
+              as Python, Java, PHP, C#, C++, Go, etc...
+              <p className="mt-3">
+                So, if you want to write some kind of stand-alone program or
+                server in Javascript, then you can use nodejs for it.
+              </p>
             </p>
             <p className="px-6 py-8">
               <strong className="underline primary-color font-bold">
-                Purpose Of MongoDB:
+                Reasons for using node MongoDB:
               </strong>
-              MongoDB is an open source NoSQL database management program. so we
-              need to understand when and When we need to use this type of
-              database in the real-life applications. Since in normal
-              circumstances, MongoDB always preferred by the developers or
-              project managers when our main concern is the deal with large
-              volume of data with a high performance. If we want to insert
-              thousands of records in a second, then MongoDB is the best choice
-              for that. Also, horizontal scaling (adding new columns) is not so
-              easy process in any RDBMS systems. But in case of MongoDB, it is
-              very much easy since it is a schema less database.
+              MongoDB is a document-oriented NoSQL database used for high volume data storage. MongoDB is a database that came into light around the mid-2000s. It comes under the category of a NoSQL database.
+              <p className="text-stone-600 mt-3"><strong >Here are the some main reasons for using MongoDB:</strong></p>
+              <li>hhhhhhh</li>
             </p>
           </AccordionItemPanel>
         </AccordionItem>

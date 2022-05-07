@@ -10,7 +10,7 @@ import auth from "../../firebase.init";
 const MyItem = () => {
   const [cars, setCars] = useState([]);
   const [user, loading, error] = useAuthState(auth);
-  console.log(user?.email);
+  // console.log(user?.email);
 
   useEffect(() => {
     const url = `http://localhost:5000/inventory?email=${user.email}`;

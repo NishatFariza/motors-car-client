@@ -7,9 +7,11 @@ import auth from "../../../firebase.init";
 import toast from "react-hot-toast";
 import { sendPasswordResetEmail } from "firebase/auth";
 import Loading from "../../Loading/Loading";
+import axios from "axios";
 
 const LogIn = () => {
   let location = useLocation();
+
   let from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
 
@@ -46,10 +48,17 @@ const LogIn = () => {
     setPassword(event.target.value);
   };
 
-  const handleLogInUser = (event) => {
+  const handleLogInUser = async (event) => {
     event.preventDefault();
 
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+    const { data } = await axios
+      .post("http://localhost:5000/login", { email })
+      .then(function (response) {
+        console.log(response);
+      });
+
+    console.log(data);
   };
 
   //reset password
