@@ -13,6 +13,7 @@ import ManageInventorys from './pages/ManageInventorys/ManageInventorys.jsx'
 import NotFound from './pages/Shared/NotFound/NotFound';
 import AddItem from './pages/AddItem/AddItem';
 import RequireAuth from './RequireAuth/RequireAuth';
+import MyItem from './pages/MyItem/MyItem';
 
 function App() {
   return (
@@ -37,7 +38,11 @@ function App() {
             <AddItem></AddItem>
           </RequireAuth>
         }></Route>
-        
+        <Route path='/myItem' element={
+          <RequireAuth>
+            <MyItem></MyItem>
+          </RequireAuth>
+        }></Route>
         <Route path='/inventory/:id' element={
           <RequireAuth>
             <Inventory></Inventory>
