@@ -10,21 +10,21 @@ import {
 
 const Blogs = () => {
   return (
-    <div className="mx-auto w-9/12 container sm:py-20 py-10">
+    <div className="mx-auto sm:w-9/12 w-11/12 container sm:py-20 py-10">
       <h2 className="text-center mb-3 sm:text-4xl text-2xl font-bold primary-color">
         FREQUENTLY ASK <span className="text-yellow-400">QUESTION</span>
       </h2>
       <div className="h-1 w-24 rounded-lg bg-blue-400 mx-auto mb-12"></div>
       <Accordion className="rounded duration-500 ">
         <AccordionItem className="box-shadow rounded duration-500">
-          <AccordionItemHeading className="border-t  sm:py-6 py-3 px-3 rounded">
+          <AccordionItemHeading className="border-t  sm:py-6 py-3 sm:px-3 px-0 rounded">
             <AccordionItemButton className="sm:text-2xl text-xl font-bold text-blue-400 flex items-start">
               <AiFillQuestionCircle className="mr-2 sm:text-2xl text-4xl flex items-start"></AiFillQuestionCircle>
               What is The Different Between JavaScript And NodeJS?
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel className="border-b">
-            <p className="px-6 pt-3 border-t">
+            <p className="sm:px-6 px-3 pt-3 border-t sm:text-base text-sm">
               <strong className="underline primary-color font-bold text-justify">
                 JavaScript:
               </strong>
@@ -36,7 +36,7 @@ const Blogs = () => {
               that uses Chrome’s V8 engine written in C++. Some of the
               javascript frameworks are RamdaJS, TypedJS, etc.
             </p>
-            <p className="px-6 py-8">
+            <p className="sm:px-6 px-3 sm:text-base text-sm py-8">
               <strong className="underline primary-color font-bold">
                 NodeJS:
               </strong>
@@ -50,14 +50,14 @@ const Blogs = () => {
           </AccordionItemPanel>
         </AccordionItem>
         <AccordionItem className="box-shadow border-y rounded duration-500">
-          <AccordionItemHeading className="border-y-b  py-6 px-3 rounded">
+          <AccordionItemHeading className="border-y-b  py-6 sm:px-3 px-0 rounded">
             <AccordionItemButton className="sm:text-2xl text-xl font-bold text-blue-400 flex items-center">
               <AiFillQuestionCircle className="mr-2 sm:text-2xl text-4xl flex items-start"></AiFillQuestionCircle>
               When Should We Use NodeJS? And When Should We Use MongoDB?
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
-            <p className="px-6 pt-3 border-t">
+            <p className="sm:px-6 px-3 sm:text-base text-sm pt-3 border-t">
               <strong className="underline primary-color font-bold text-justify">
                 Reasons for using NodeJS:
               </strong>
@@ -76,25 +76,54 @@ const Blogs = () => {
                 server in Javascript, then you can use nodejs for it.
               </p>
             </p>
-            <p className="px-6 py-8">
+            <p className="sm:px-6 px-3 sm:text-base text-sm py-8">
               <strong className="underline primary-color font-bold">
                 Reasons for using node MongoDB:
               </strong>
-              MongoDB is a document-oriented NoSQL database used for high volume data storage. MongoDB is a database that came into light around the mid-2000s. It comes under the category of a NoSQL database.
-              <p className="text-stone-600 mt-3"><strong >Here are the some main reasons for using MongoDB:</strong></p>
-              <li>hhhhhhh</li>
+              MongoDB is a document-oriented NoSQL database used for high volume
+              data storage. MongoDB is a database that came into light around
+              the mid-2000s. It comes under the category of a NoSQL database. If
+              your application needs the ability to persistently store data in a
+              way that you can efficiently query or update it later, then you
+              would typically use some form of database. There are dozens of
+              popular databases. MongoDB is one such database. MariaDB, MySql,
+              CouchDB, DynamoDB (on AWS), Postgres are examples of other
+              databases.
+              <p className="text-stone-600 mt-3">
+                <strong>
+                  Here are the some main reasons for using MongoDB:
+                </strong>
+              </p>
+              <li>
+                MongoDB is very flexible and adaptable to real business world
+                situations and requirements.
+              </li>
+              <li>
+                Queries can be made to return certain fields within documents.
+              </li>
+              <li>
+                MongoDB supports field, range-based query, regular expression,
+                etc. for searching the data from the stored data.
+              </li>
+              <li>
+                The dynamic database schema used in MongoDB is called the JSON.
+              </li>
+              <li>
+                MongoDB basically uses JavaScript objects in place of the
+                procedure.
+              </li>
             </p>
           </AccordionItemPanel>
         </AccordionItem>
         <AccordionItem className="box-shadow border-b rounded duration-500">
-          <AccordionItemHeading className="  py-6 px-3 rounded">
+          <AccordionItemHeading className="  py-6 sm:px-3 px-0 rounded">
             <AccordionItemButton className="sm:text-2xl text-xl font-bold text-blue-400 flex items-center">
               <AiFillQuestionCircle className="mr-2 sm:text-2xl text-4xl flex items-start"></AiFillQuestionCircle>
               What is The Different Between SQL And NoSQL?
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel className="border-y ">
-            <p className="px-6 pt-3 border-t">
+            <p className="sm:px-6 px-3 sm:text-base text-sm pt-3 border-t">
               <strong className="underline primary-color font-bold text-justify">
                 SQL:
               </strong>
@@ -110,7 +139,7 @@ const Blogs = () => {
               who can help you with SQL database for a very large scale
               deployments.
             </p>
-            <p className="px-6 py-8">
+            <p className="sm:px-6 px-3 sm:text-base text-sm py-8">
               <strong className="underline primary-color font-bold">
                 NoSQL:
               </strong>
@@ -129,14 +158,14 @@ const Blogs = () => {
           </AccordionItemPanel>
         </AccordionItem>
         <AccordionItem className="box-shadow border-b rounded duration-500">
-          <AccordionItemHeading className=" py-6 px-3 rounded">
+          <AccordionItemHeading className=" py-6 sm:px-3 px-0 rounded">
             <AccordionItemButton className="sm:text-2xl text-xl font-bold text-blue-400 flex items-center">
               <AiFillQuestionCircle className="mr-2 sm:text-2xl text-4xl flex items-start"></AiFillQuestionCircle>
               What is The Purpose of JWT? How dose Work JWT?
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
-            <p className="px-6 pt-3 border-t">
+            <p className="sm:px-6 px-3 sm:text-base text-sm pt-3 border-t">
               <strong className="underline primary-color font-bold text-justify">
                 JWT:
               </strong>
@@ -149,7 +178,7 @@ const Blogs = () => {
               using public/private key pairs, the signature also certifies that
               only the party holding the private key is the one that signed it.
             </p>
-            <p className="px-6 py-8">
+            <p className="sm:px-6 px-3 sm:text-base text-sm py-8">
               <strong className="underline primary-color font-bold">
                 Jwt Work:
               </strong>
