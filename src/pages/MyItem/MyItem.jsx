@@ -1,16 +1,19 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { RiArrowRightLine } from "react-icons/ri";
 import { AiFillDelete } from "react-icons/ai";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import { signOut } from "firebase/auth";
+import toast from "react-hot-toast";
 
 const MyItem = () => {
   const [cars, setCars] = useState([]);
   const [user, loading, error] = useAuthState(auth);
   // console.log(user?.email);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const url = `http://localhost:5000/inventory?email=${user.email}`;
@@ -21,9 +24,15 @@ const MyItem = () => {
         },
       })
       .then((response) => {
+        // console.log(response.response.status);
         setCars(response.data);
       })
       .catch((error) => {
+        if (error?.response?.status === 403) {
+          navigate("/login");
+          signOut(auth);
+          toast.error("You Have No Access!! Log Out!!");
+        }
         console.log(error);
       });
   }, [user.email]);
