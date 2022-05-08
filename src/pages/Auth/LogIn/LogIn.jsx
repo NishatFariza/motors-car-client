@@ -60,7 +60,7 @@ const LogIn = () => {
       { email }
     );
     localStorage.setItem("AccessToken", data.accessToken);
-    console.log(data.accessToken);
+    // console.log(data.accessToken);
   };
 
   //reset password

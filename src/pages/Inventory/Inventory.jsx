@@ -4,10 +4,12 @@ import { Link, useParams } from "react-router-dom";
 import { RiArrowRightLine } from "react-icons/ri";
 import toast from "react-hot-toast";
 import "./Inventory.css";
+import Loading from "../Loading/Loading";
 
 const Inventory = () => {
   const { id } = useParams();
   const [car, setCar] = useState({});
+  const [loading, setLoading] = useState(true);
 
   const { img, name, price, supplier, sold, description, quantity } = car;
 
@@ -101,6 +103,16 @@ const Inventory = () => {
         console.log(error);
       });
   };
+  useEffect(() => {
+    if (Object.keys(car).length > 0) {
+      setLoading(false);
+    }
+    // console.log(Object.keys(car).length);
+  }, [car]);
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   return (
     <div className="container mx-auto sm:py-24 py-16">

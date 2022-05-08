@@ -1,13 +1,15 @@
 import axios from "axios";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { RiArrowRightLine } from "react-icons/ri";
 import { AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import useCars from "../../Hooks/UseCars";
+import Loading from "../Loading/Loading";
 
 const MangeInventory = () => {
   const [cars, setCars] = useCars();
+  const [loading, setLoading] = useState(true);
 
   const handleDeleteItem = (id) => {
     // console.log(id);
@@ -39,6 +41,17 @@ const MangeInventory = () => {
       }
     });
   };
+
+  useEffect(() => {
+    if (cars.length > 0) {
+      setLoading(false);
+    }
+  }, [cars]);
+  // console.log(cars.length);
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
   return (
     <div className="pb-20 sm:mx-10 mx-1 pt-5">
       <div className="mb-8 flex justify-end">
