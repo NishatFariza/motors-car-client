@@ -5,6 +5,7 @@ import { RiArrowRightLine } from "react-icons/ri";
 import toast from "react-hot-toast";
 import "./Inventory.css";
 import Loading from "../Loading/Loading";
+import { Fade } from "react-reveal";
 
 const Inventory = () => {
   const { id } = useParams();
@@ -117,71 +118,75 @@ const Inventory = () => {
   return (
     <div className="container mx-auto sm:py-24 py-16">
       <div className="flex flex-col sm:flex-row justify-between items-center h-fit">
-        <div className="border card-shadow sm:w-9/12 w-11/12 rounded">
-          <div className=" flex  flex-col sm:flex-row justify-between items-center">
-            <div className="sm:w-6/12 w-11/12 sm:pt-0 pt-4 h-full rounded pl-2">
-              <img className="w-full h-full rounded" src={img} alt="" />
-            </div>
+        <Fade right>
+          <div className="border card-shadow sm:w-9/12 w-11/12 rounded">
+            <div className=" flex  flex-col sm:flex-row justify-between items-center">
+              <div className="sm:w-6/12 w-11/12 sm:pt-0 pt-4 h-full rounded pl-2">
+                <img className="w-full h-full rounded" src={img} alt="" />
+              </div>
 
-            <div className="sm:w-6/12 w-11/12 sm:px-10 px-3">
-              <div className="flex flex-col sm:flex-row justify-between items-center mt-5">
-                <h2 className="sm:text-3xl text-2xl text-blue-400 hover:text-yellow-400 duration-500 font-bold">
-                  {name}
-                </h2>
-                <div className="items-end flex justify-end">
-                  {quantity === 0 ? (
-                    <button className="border border-yellow-400 px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600">
-                      StockOut
-                    </button>
-                  ) : (
-                    <button
-                      onClick={handleOndDelivery}
-                      className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600"
-                    >
-                      Delivered
-                    </button>
-                  )}
+              <div className="sm:w-6/12 w-11/12 sm:px-10 px-3">
+                <div className="flex flex-col sm:flex-row justify-between items-center mt-5">
+                  <h2 className="sm:text-3xl text-2xl text-blue-400 hover:text-yellow-400 duration-500 font-bold">
+                    {name}
+                  </h2>
+                  <div className="items-end flex justify-end">
+                    {quantity === 0 ? (
+                      <button className="border border-yellow-400 px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600">
+                        StockOut
+                      </button>
+                    ) : (
+                      <button
+                        onClick={handleOndDelivery}
+                        className="border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-white duration-500 mt-4 font-semibold text-stone-600"
+                      >
+                        Delivered
+                      </button>
+                    )}
+                  </div>
+                </div>
+                <p className="text-stone-500 font-semibold mt-2">
+                  <strong className="primary-color">Supplier: </strong>
+                  {supplier}
+                </p>
+                <p className="text-stone-500 font-semibold mt-0">
+                  <strong className="primary-color">Stock: </strong>
+                  {quantity}
+                </p>
+                <p className="text-stone-500 font-semibold mt-0">
+                  <strong className="primary-color">Sold: </strong> {sold}
+                </p>
+                <p className="text-yellow-500 font-semibold mt-0">${price}</p>
+                <p className="text-stone-700 font-semibold mt-0">Id: {id}</p>
+                <div className="text-justify text-stone-500 mt-2">
+                  <p className="mb-5">{description}</p>
                 </div>
               </div>
-              <p className="text-stone-500 font-semibold mt-2">
-                <strong className="primary-color">Supplier: </strong>
-                {supplier}
-              </p>
-              <p className="text-stone-500 font-semibold mt-0">
-                <strong className="primary-color">Stock: </strong>
-                {quantity}
-              </p>
-              <p className="text-stone-500 font-semibold mt-0">
-                <strong className="primary-color">Sold: </strong> {sold}
-              </p>
-              <p className="text-yellow-500 font-semibold mt-0">${price}</p>
-              <p className="text-stone-700 font-semibold mt-0">Id: {id}</p>
-              <div className="text-justify text-stone-500 mt-2">
-                <p className="mb-5">{description}</p>
-              </div>
             </div>
           </div>
-        </div>
-        <div className="sm:w-3/12 w-11/12 mx-auto sm:mx-0 sm:mt-0 mt-8  text-center">
-          <form onSubmit={handleAddStock}>
-            <input className="rounded" type="number" name="stock" id="" />
-            <br />
-            <input
-              className="bg-blue-500 px-6 cursor-pointer py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"
-              type="submit"
-              value="Add Stock"
-            />
-          </form>
-          <div className="sm:mt-4 mt-10 w-56 mx-auto">
-            <Link
-              to="/manageInventory"
-              className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"
-            >
-              Manage Inventory
-              <RiArrowRightLine className="text-xl ml-2"></RiArrowRightLine>
-            </Link>
+        </Fade>
+        <Fade top>
+          <div className="sm:w-3/12 w-11/12 mx-auto sm:mx-0 sm:mt-0 mt-8  text-center">
+            <form onSubmit={handleAddStock}>
+              <input className="rounded" type="number" name="stock" id="" />
+              <br />
+              <input
+                className="bg-blue-500 px-6 cursor-pointer py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"
+                type="submit"
+                value="Add Stock"
+              />
+            </form>
+            <div className="sm:mt-4 mt-10 w-56 mx-auto">
+              <Link
+                to="/manageInventory"
+                className="flex justify-center items-center border bg-blue-500 px-6 py-3 rounded-full hover:bg-yellow-400 text-white duration-500 mt-4 font-semibold"
+              >
+                Manage Inventory
+                <RiArrowRightLine className="text-xl ml-2"></RiArrowRightLine>
+              </Link>
+            </div>
           </div>
-        </div>
+        </Fade>
       </div>
     </div>
   );
