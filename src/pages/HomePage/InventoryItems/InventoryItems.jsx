@@ -4,10 +4,22 @@ import Car from "../Car/Car";
 import { RiArrowRightLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import useCars from "../../../Hooks/UseCars";
+import Loading from "../../Loading/Loading";
 
 const InventoryItems = () => {
   const [cars, setCars] = useCars();
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    if (cars.length > 0) {
+      setLoading(false);
+    }
+  }, [cars]);
+  console.log(cars.length);
+
+  // if (loading) {
+  //   return <Loading></Loading>;
+  // }
   return (
     <div className="container mx-auto md:py-24 py-12">
       <div className="md:mb-16 mb-8 text-center">

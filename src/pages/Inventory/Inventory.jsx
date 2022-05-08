@@ -12,7 +12,7 @@ const Inventory = () => {
   const { img, name, price, supplier, sold, description, quantity } = car;
 
   useEffect(() => {
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://murmuring-temple-22703.herokuapp.com/inventory/${id}`;
     // console.log(url);
     axios
       .get(url)
@@ -51,7 +51,7 @@ const Inventory = () => {
     // console.log(updateCar);
     setCar(updateCar);
 
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://murmuring-temple-22703.herokuapp.com/inventory/${id}`;
     // console.log(url);
     axios
       .put(url, updateCar)
@@ -86,7 +86,7 @@ const Inventory = () => {
     // console.log(updateCar);
     setCar(updateCar);
 
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://murmuring-temple-22703.herokuapp.com/inventory/${id}`;
     // console.log(url);
     axios
       .put(url, updateCar)

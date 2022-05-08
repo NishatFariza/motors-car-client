@@ -55,7 +55,10 @@ const LogIn = () => {
     event.preventDefault();
 
     await signInWithEmailAndPassword(email, password);
-    const { data } = await axios.post("http://localhost:5000/login", { email });
+    const { data } = await axios.post(
+      "https://murmuring-temple-22703.herokuapp.com/login",
+      { email }
+    );
     localStorage.setItem("AccessToken", data.accessToken);
     console.log(data.accessToken);
   };

@@ -23,7 +23,7 @@ const AddItem = () => {
     };
     // console.log(newCar);
 
-    const url = `http://localhost:5000/inventory`;
+    const url = `https://murmuring-temple-22703.herokuapp.com/inventory`;
     axios
       .post(url, newCar)
       .then(function (response) {

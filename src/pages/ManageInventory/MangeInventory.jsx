@@ -11,7 +11,7 @@ const MangeInventory = () => {
 
   const handleDeleteItem = (id) => {
     // console.log(id);
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://murmuring-temple-22703.herokuapp.com/inventory/${id}`;
     // console.log(url);
     Swal.fire({
       title: "Are you sure?",

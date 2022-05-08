@@ -16,7 +16,7 @@ const MyItem = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const url = `http://localhost:5000/inventory?email=${user.email}`;
+    const url = `https://murmuring-temple-22703.herokuapp.com/inventory?email=${user.email}`;
     axios
       .get(url, {
         headers: {
@@ -39,7 +39,7 @@ const MyItem = () => {
 
   const handleDeleteItem = (id) => {
     // console.log(id);
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://murmuring-temple-22703.herokuapp.com/inventory/${id}`;
     // console.log(url);
     Swal.fire({
       title: "Are you sure?",
